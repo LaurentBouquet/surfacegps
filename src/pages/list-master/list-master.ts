@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, ModalController, NavController } from 'ionic-angular';
+import { IonicPage, ModalController, NavController, Events } from 'ionic-angular';
 
 import { Item } from '../../models/item';
 import { Items } from '../../providers/providers';
@@ -12,14 +12,16 @@ import { Items } from '../../providers/providers';
 export class ListMasterPage {
   currentItems: Item[];
 
-  constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController) {
-    this.currentItems = this.items.query();
+  constructor(private navCtrl: NavController, private items: Items, private modalCtrl: ModalController, private events: Events) {
+    this.events.subscribe('items:loaded', (data, date) => {
+      this.currentItems = data;  
+    });
   }
 
   /**
    * The view loaded, let's query our items for the list
    */
-  ionViewDidLoad() {
+  ionViewDidLoad() { 
   }
 
   /**
@@ -34,6 +36,7 @@ export class ListMasterPage {
       }
     })
     addModal.present();
+    this.currentItems = this.items.query();
   }
 
   /**
@@ -41,6 +44,7 @@ export class ListMasterPage {
    */
   deleteItem(item) {
     this.items.delete(item);
+    this.currentItems = this.items.query();
   }
 
   /**

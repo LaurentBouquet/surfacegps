@@ -8,11 +8,37 @@
 
 
 <ion-content>
-  <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
+  <div class="item-profile" text-center #image [style.background-image]="'url(' + item.image + ')'">
   </div>
 
   <div class="item-detail" padding>
     <h2>{{item.name}}</h2>
     <p>{{item.about}}</p>
+
+    <button ion-button (click)="savePiece(item)"></button>
+
+    <ion-grid>
+      <ion-row>
+          <button ion-button large icon-left (click)="getPosition()" [disabled]="currentStep>2" strong>
+            <ion-icon name="pin"></ion-icon>
+            {{ 'SAVE_POSITION_BUTTON' | translate }}
+          </button>
+      </ion-row>
+      <ion-row>
+        <ion-col width-50 style="text-align: left">
+          <button ion-button icon-left (click)="done()" [disabled]="currentStep<2">
+            <ion-icon name="calculator"></ion-icon>
+            {{ 'CALC_SURFACE_BUTTON' | translate }}
+          </button>
+        </ion-col>
+        <ion-col width-50 style="text-align: right">
+          <button ion-button icon-left (click)="done()" [disabled]="currentStep<1">
+            <ion-icon name="refresh-circle"></ion-icon> 
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
   </div>
+
 </ion-content>

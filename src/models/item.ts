@@ -9,6 +9,24 @@
  */
 export class Item {
 
+  rowid: number;
+  name: string;
+  about: string;
+  image: HTMLImageElement;
+  points: string;
+  surface: number;
+  step: number;
+
+  defaultItem: any = {
+    "rowid": 0,
+    "name": "Unknown",
+    "about": "None",
+    "image": "",
+    "points": "",
+    "surface": 0,
+    "step": 0
+  };
+
   constructor(fields: any) {
     // Quick and dirty extend/assign fields to this model
     for (const f in fields) {

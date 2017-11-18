@@ -10,7 +10,7 @@ SurfaceGPS is an application that calculates the area of a parcel of land using 
 To test this application :
 
 1. Install the lastest version of the Ionic CLI 
-(https://ionicframework.com/docs/cli/)
+[Ionic CLI](https://ionicframework.com/docs/cli/)
 
 2. Run:
 ```bash
@@ -31,7 +31,7 @@ The entry and main pages can be configured easily by updating the corresponding 
 
 ## Providers
 
-The list of parcels is stored in SQLite and managed by the "provider" Items. 
+The list of pieces is stored in SQLite and managed by the "provider" Items. 
 
 
 ## i18n

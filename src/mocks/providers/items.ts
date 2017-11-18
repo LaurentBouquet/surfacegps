@@ -1,67 +1,97 @@
 import { Injectable } from '@angular/core';
+import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
+import { ToastController, Events } from 'ionic-angular';
 
 import { Item } from '../../models/item';
 
+const DATABASE_FILE_NAME: string = 'data.db';
+
 @Injectable()
-export class Items {
-  items: Item[] = [];
+export class Items { 
+  
+  private items: Item[] = [];
+  private db: SQLiteObject;
 
   defaultItem: any = {
-    "name": "Burt Bear",
-    "profilePic": "assets/img/speakers/bear.jpg",
-    "about": "Burt is a Bear.",
+    "rowid": 0,
+    "name": "Unknow",
+    "about": "",
+    "image": "",
+    "points": "",
+    "surface": 0,
+    "step": 0
+
   };
 
 
-  constructor() {
-    let items = [
-      {
-        "name": "Burt Bear",
-        "profilePic": "assets/img/speakers/bear.jpg",
-        "about": "Burt is a Bear."
-      },
-      {
-        "name": "Charlie Cheetah",
-        "profilePic": "assets/img/speakers/cheetah.jpg",
-        "about": "Charlie is a Cheetah."
-      },
-      {
-        "name": "Donald Duck",
-        "profilePic": "assets/img/speakers/duck.jpg",
-        "about": "Donald is a Duck."
-      },
-      {
-        "name": "Eva Eagle",
-        "profilePic": "assets/img/speakers/eagle.jpg",
-        "about": "Eva is an Eagle."
-      },
-      {
-        "name": "Ellie Elephant",
-        "profilePic": "assets/img/speakers/elephant.jpg",
-        "about": "Ellie is an Elephant."
-      },
-      {
-        "name": "Molly Mouse",
-        "profilePic": "assets/img/speakers/mouse.jpg",
-        "about": "Molly is a Mouse."
-      },
-      {
-        "name": "Paul Puppy",
-        "profilePic": "assets/img/speakers/puppy.jpg",
-        "about": "Paul is a Puppy."
-      }
-    ];
-
-    for (let item of items) {
-      this.items.push(new Item(item));
-    }
+  constructor(private sqlite: SQLite, private toastCtrl: ToastController, public events: Events) {
+    this.createDatabaseFile();    
   }
 
-  query(params?: any) {
+  private presentToast(message: string) {
+    let toast = this.toastCtrl.create({
+      message: message,
+      duration: 3000,
+      position: 'top'
+    });  
+    toast.onDidDismiss(() => {
+      console.log('Dismissed toast');
+    });  
+    toast.present();
+  }
+
+  private createDatabaseFile(): void { 
+    this.sqlite.create({
+      name: DATABASE_FILE_NAME,
+      location: 'default'
+    })
+      .then((db: SQLiteObject) => {
+        console.debug('Database: ' + DATABASE_FILE_NAME);
+        this.db = db;
+        this.createTables();
+      })
+      .catch(e => this.presentToast(e.message)); 
+  }
+
+  private createTables(): void {
+    this.db.executeSql('CREATE TABLE IF NOT EXISTS "pieces" ( `rowid` INTEGER PRIMARY KEY AUTOINCREMENT, `name` TEXT NOT NULL, `about` TEXT NOT NULL, `image` BLOB, `points` BLOB, `surface` REAL NOT NULL DEFAULT 0, `step` INTEGER NOT NULL DEFAULT 0  ) ;', {})
+      .then(() => {
+        console.debug('Table "pieces" OK');
+        this.getData();
+      })
+      .catch(e => this.presentToast(e.message));
+  }
+
+  public getData(): Item[] {
+    this.db.executeSql('SELECT * FROM pieces ORDER BY rowid ASC ;', {})
+      .then((data: any) => { 
+        this.items = [];
+        console.debug(data.rows.length);
+        for(var i=0; i<data.rows.length; i++) { 
+          let row = data.rows.item(i);
+          let item = new Item(this.defaultItem);
+          item.rowid = row.rowid;
+          item.name = row.name;
+          item.about = row.about;
+          item.image = row.image;
+          item.points = row.points;
+          item.surface = row.surface; 
+          item.step = row.step;
+          console.debug(item.name); 
+          this.items.push(item);
+        }
+        this.events.publish('items:loaded', this.items, Date.now());
+      })
+      .catch(e => this.presentToast(e.message));  
+    return this.items;
+  }
+
+
+
+  public query(params?: any): Item[] {
     if (!params) {
       return this.items;
     }
-
     return this.items.filter((item) => {
       for (let key in params) {
         let field = item[key];
@@ -71,15 +101,19 @@ export class Items {
           return item;
         }
       }
-      return null;
+      return null; 
     });
   }
 
-  add(item: Item) {
-    this.items.push(item);
+  public add(item: Item) {
+    this.items.push(item); 
+    let data = [item.name, item.about, item.image, item.points, item.surface ? item.surface : 0, item.step ? item.step : 0];    
+    this.db.executeSql('INSERT INTO pieces (name, about, image, points, surface, step) VALUES (?, ?, ?, ?, ?, ?) ;', data)
+      .then(() => console.debug('New piece "'+item.name+'" created'))
+      .catch(e => this.presentToast(e.message));
   }
 
-  delete(item: Item) {
+  public delete(item: Item) {
     this.items.splice(this.items.indexOf(item), 1);
   }
 }
