@@ -11,7 +11,7 @@ SurfaceGPS is an application that calculates the area of a parcel of land using 
 3. [Providers](#providers)
 4. [i18n](#i18n) (adding languages)
 
-## <a name="getting-started"></a>Getting Started
+## <a name="getting-started">Getting Started</a>
 
 To test this application :
 
