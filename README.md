@@ -1,6 +1,6 @@
 # SurfaceGPS 
 
-SurfaceGPS is an application that calculates the area of a piece of land using the GPS sensor of a smartphone
+SurfaceGPS is an application that calculates the area of a piece of land using the GPS sensor of a smartphone.
 
 _Note: SurfaceGPS requires Ionic CLI 3._
 
