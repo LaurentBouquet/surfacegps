@@ -22,7 +22,7 @@ ionic serve -c
 
 ## Pages
 
-SurfaceGPS loads with the `FirstRunPage` set to `TutorialPage` as the default. If the user has already gone through this page once, it will be skipped the next time they load the app.
+SurfaceGPS loads with the `FirstRunPage` set to `TutorialPage` as the default. If the user has already gone through this page once, it will be skipped the next time he loads the app.
 
 If the tutorial is skipped, the Welcome page will be displayed. This is the page titled `MainPage` which is set to be the `TabsPage` as the default.
 
