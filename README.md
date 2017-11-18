@@ -9,18 +9,19 @@ SurfaceGPS is an application that calculates the area of a parcel of land using 
 
 To test this application :
 
-1. ```bash
+1. Clone this repository with this comand: 
+```bash
 git clone https://laurentbouquet@bitbucket.org/joliciel/surfacegps.git
 cd surfacegps
 ionic serve -c
 ```
-or download source at https://bitbucket.org/joliciel/surfacegps/downloads/ and unzip the zip file
+
+2. install the lastest version of the Ionic CLI 
+https://ionicframework.com/docs/cli/
 
 
-2. install the latest version of the Ionic CLI and run:
-
+3. run:
 ```bash
-git clone https://laurentbouquet@bitbucket.org/joliciel/surfacegps.git
 cd surfacegps
 ionic serve -c
 ```
