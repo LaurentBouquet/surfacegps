@@ -9,7 +9,7 @@ _Note: SurfaceGPS requires Ionic CLI 3._
 
 To test this application :
 
-1. Install the lastest version of the Ionic CLI 
+1. Install the lastest version of the 
 [Ionic CLI](https://ionicframework.com/docs/cli/)
 
 2. Run:
