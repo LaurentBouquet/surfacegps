@@ -36,7 +36,7 @@ The list of parcels is stored in SQLite and managed by the "provider" Items.
 
 ## i18n
 
-Ionic Super Starter comes with internationalization (i18n) out of the box with [ngx-translate](https://github.com/ngx-translate/core). This makes it easy to change the text used in the app by modifying only one file. 
+SurfaceGPS comes with internationalization (i18n) out of the box with [ngx-translate](https://github.com/ngx-translate/core). This makes it easy to change the text used in the app by modifying only one file. 
 
 
 ### Adding Languages
