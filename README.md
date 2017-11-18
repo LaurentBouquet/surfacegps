@@ -4,14 +4,8 @@ _Note: SurfaceGPS requires Ionic CLI 3._
 
 SurfaceGPS is an application that calculates the area of a parcel of land using the GPS sensor of a smartphone
 
-## Table of Contents
 
-1. [Getting Started](#getting-started)
-2. [Pages](#pages)
-3. [Providers](#providers)
-4. [i18n](#i18n) (adding languages)
-
-## <a name="getting-started">Getting Started</a>
+## Getting Started
 
 To test this application :
 
@@ -44,10 +38,17 @@ The list of parcels is stored in SQLite and managed by the "provider" Items.
 
 Ionic Super Starter comes with internationalization (i18n) out of the box with [ngx-translate](https://github.com/ngx-translate/core). This makes it easy to change the text used in the app by modifying only one file. 
 
+
 ### Adding Languages
 
 To add new languages, add new files to the `src/assets/i18n` directory, following the pattern of LANGCODE.json where LANGCODE is the language/locale code (ex: en/gb/de/es/etc.).
 
+
 ### Changing the Language
 
 To change the language of the app, edit `src/app/app.component.ts` and modify `translate.use('en')` to use the LANGCODE from `src/assets/i18n/`
+
+
+Thank you in advance for your contribution :-)
+
+
