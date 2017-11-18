@@ -2,8 +2,6 @@
 
 _Note: SurfaceGPS requires Ionic CLI 3._
 
-<img src="super2.png" width="400" />
-
 SurfaceGPS is an application that calculates the area of a parcel of land using the GPS sensor of a smartphone
 
 ## Table of Contents
@@ -15,37 +13,32 @@ SurfaceGPS is an application that calculates the area of a parcel of land using 
 
 ## <a name="getting-started"></a>Getting Started
 
-To test this starter out, install the latest version of the Ionic CLI and run:
+To test this application :
+
+1. Download sources at https://bitbucket.org/joliciel/surfacegps/get/ff0b6f64cd33.zip
+
+2. unzip this file
+
+3. install the latest version of the Ionic CLI and run:
 
 ```bash
-ionic start mySuperApp super
+cd surfacegps
+ionic serve -c
 ```
 
 ## Pages
 
-The Super Starter comes with a variety of ready-made pages. These pages help you assemble common building blocks for your app so you can focus on your unique features and branding.
+SurfaceGPS loads with the `FirstRunPage` set to `TutorialPage` as the default. If the user has already gone through this page once, it will be skipped the next time they load the app.
 
-The app loads with the `FirstRunPage` set to `TutorialPage` as the default. If the user has already gone through this page once, it will be skipped the next time they load the app.
+If the tutorial is skipped, the Welcome page will be displayed. This is the page titled `MainPage` which is set to be the `TabsPage` as the default.
 
-If the tutorial is skipped but the user hasn't logged in yet, the Welcome page will be displayed which is a "splash" prompting the user to log in or create an account.
+The entry and main pages can be configured easily by updating the corresponding variables in [src/pages/pages.ts].
 
-Once the user is authenticated, the app will load with the `MainPage` which is set to be the `TabsPage` as the default.
-
-The entry and main pages can be configured easily by updating the corresponding variables in [src/pages/pages.ts](https://github.com/ionic-team/ionic-starter-super/blob/master/src/pages/pages.ts).
-
-Please read the [Pages](https://github.com/ionic-team/ionic-starter-super/tree/master/src/pages) readme, and the readme for each page in the source for more documentation on each.
 
 ## Providers
 
-The Super Starter comes with some basic implementations of common providers.
+The list of parcels is stored in SQLite and managed by the "provider" Items. 
 
-### User
-
-The `User` provider is used to authenticate users through its `login(accountInfo)` and `signup(accountInfo)` methods, which perform `POST` requests to an API endpoint that you will need to configure.
-
-### Api
-
-The `Api` provider is a simple CRUD frontend to an API. Simply put the root of your API url in the Api class and call get/post/put/patch/delete 
 
 ## i18n
 
