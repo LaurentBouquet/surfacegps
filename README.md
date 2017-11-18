@@ -1,8 +1,8 @@
 # SurfaceGPS 
 
-_Note: SurfaceGPS requires Ionic CLI 3._
-
 SurfaceGPS is an application that calculates the area of a parcel of land using the GPS sensor of a smartphone
+
+_Note: SurfaceGPS requires Ionic CLI 3._
 
 
 ## Getting Started
