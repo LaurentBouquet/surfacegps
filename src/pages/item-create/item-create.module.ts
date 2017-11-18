@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { IonicPageModule } from 'ionic-angular';
+//import { SQLite } from '@ionic-native/sqlite';
 
 import { ItemCreatePage } from './item-create';
+
 
 @NgModule({
   declarations: [
@@ -14,6 +16,9 @@ import { ItemCreatePage } from './item-create';
   ],
   exports: [
     ItemCreatePage
-  ]
+  ]/*,
+  providers: [
+    SQLite
+  ]*/
 })
 export class ItemCreatePageModule { }

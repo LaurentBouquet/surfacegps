@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { IonicPageModule } from 'ionic-angular';
+import { Geolocation } from '@ionic-native/geolocation';
 
 import { ItemDetailPage } from './item-detail';
 
@@ -14,6 +15,9 @@ import { ItemDetailPage } from './item-detail';
   ],
   exports: [
     ItemDetailPage
+  ],
+  providers: [
+    Geolocation
   ]
 })
 export class ItemDetailPageModule { }

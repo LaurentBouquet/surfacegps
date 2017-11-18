@@ -1,29 +1,32 @@
 {
+
+  "BACK_BUTTON_TEXT": "Retour", 
+
   "NAME": "Nom",
   "PASSWORD": "Mot de passe",
   "EMAIL": "E-mail",
   "LOGIN": "Connexion",
   "SIGNUP": "Inscription",
 
-  "TAB1_TITLE": "Items",
+  "TAB1_TITLE": "Parcelles",
   "TAB2_TITLE": "Recherche",
   "TAB3_TITLE": "Paramètres",
 
   "MAP_TITLE": "Carte",
 
-  "TUTORIAL_SLIDE1_TITLE": "Bienvenue dans le kit de démarrage Ionic Super Starter",
-  "TUTORIAL_SLIDE1_DESCRIPTION": "<b>Ionic Super Starter</b> est un kit complet pour démarrer sur Ionic. Il repose sur les meilleures pratiques et implémente de nombreux types de pages.",
+  "TUTORIAL_SLIDE1_TITLE": "Bienvenue dans SurfaceGPS",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "<b>SurfaceGPS</b> vous permet de calculer facilement la surface d'une parcelle de terre à partir du GPS de votre smartphone.",
 
-  "TUTORIAL_SLIDE2_TITLE": "Comment utiliser le Super Starter",
-  "TUTORIAL_SLIDE2_DESCRIPTION": "Assemblez les types de pages désirés et supprimez les autres. Le kit inclut plusieurs mises en page courantes d’applications mobiles, comme les pages de connexion et d’inscription, les onglets et cette page de tutoriel.",
+  "TUTORIAL_SLIDE2_TITLE": "Comment utiliser SurfaceGPS",
+  "TUTORIAL_SLIDE2_DESCRIPTION": "Cliquer sur 'Créer une parcelle', puis enregistrer des positions GPS, et enfin cliquer sur 'Calculer la surface'.",
 
   "TUTORIAL_SLIDE3_TITLE": "Pour commencer",
-  "TUTORIAL_SLIDE3_DESCRIPTION": "Si vous avez besoin d’aide, consultez le README du Super Starter pour un tutoriel complet.",
+  "TUTORIAL_SLIDE3_DESCRIPTION": "Si vous avez besoin d’aide, consultez le README de SurfaceGPS pour un tutoriel complet.",
 
   "SETTINGS_TITLE": "Paramètres",
-  "SETTINGS_OPTION1": "Option 1",
+  "SETTINGS_OPTION1": "Afficher le tutoriel au démarrage",
   "SETTINGS_OPTION2": "Option 2",
-  "SETTINGS_OPTION3": "Option 3",
+  "SETTINGS_OPTION3": "Enregistrement de la position (secondes)",
   "SETTINGS_OPTION4": "Option 4",
 
   "SETTINGS_PAGE_PROFILE": "Modifier le profil",
@@ -37,12 +40,24 @@
   "SIGNUP_ERROR": "Inscription impossible. Veuillez vérifier les informations de votre compte et réessayer.",
   "SIGNUP_BUTTON": "Inscription",
 
-  "LIST_MASTER_TITLE": "Items",
+  "LIST_MASTER_TITLE": "Parcelles",
 
-  "ITEM_CREATE_TITLE": "Nouvel item",
+  "ITEM_CREATE_TITLE": "Nouvelle parcelle",
   "ITEM_CREATE_CHOOSE_IMAGE": "Ajouter une image",
+
+  "ITEM_NAME_PLACEHOLDER": "Nom de la parcelle",
+  "ITEM_ABOUT_PLACEHOLDER": "Description",
+
+  "SAVE_BUTTON": "Enregistrer",
+  "SAVE_POSITION_BUTTON": "Enregistrer la position",
+  "CALC_SURFACE_BUTTON": "Calculer la surface",
+  "RESET_BUTTON": "Remettre à zéro",
+  "DONE_BUTTON": "Valider",
+  "CANCEL_BUTTON": "Annuler",
+  "DELETE_BUTTON": "Supprimer",
 
   "CARDS_TITLE": "Social",
 
-  "SEARCH_TITLE": "Recherche"
+  "SEARCH_TITLE": "Recherche",
+  "SEARCH_PLACEHOLDER": "Rechercher une parcelle"
 }
