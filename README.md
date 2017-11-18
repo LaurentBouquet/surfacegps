@@ -13,10 +13,8 @@ To test this application :
 ```bash
 git clone https://laurentbouquet@bitbucket.org/joliciel/surfacegps.git
 ```
-
 2. Install the lastest version of the Ionic CLI 
 (https://ionicframework.com/docs/cli/)
-
 
 3. Run:
 ```bash
