@@ -7,7 +7,7 @@ import { Config, Nav, Platform } from 'ionic-angular';
 import { FirstRunPage, MainPage } from '../pages/pages';
 import { Settings } from '../providers/providers';
 
-@Component({
+/*@Component({
   template: `<ion-menu [content]="content">
     <ion-header>
       <ion-toolbar>
@@ -25,7 +25,12 @@ import { Settings } from '../providers/providers';
 
   </ion-menu>
   <ion-nav #content [root]="rootPage"></ion-nav>`
+})*/
+@Component({
+  template: `<ion-nav #content [root]="rootPage"></ion-nav>`
 })
+
+
 export class MyApp {
   //rootPage = FirstRunPage;
 

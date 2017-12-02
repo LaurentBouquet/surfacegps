@@ -21,7 +21,9 @@
           <img [src]="item.image" />
         </ion-avatar>
         <h2>{{item.name}}</h2>
+        <!-- <h3>{{item.surface}} m2</h3> -->
         <p>{{item.about}}</p>
+        <ion-badge color="danger" item-end>{{item.surface}} m²</ion-badge>
         <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
       </button>
 
