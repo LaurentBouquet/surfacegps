@@ -7,7 +7,12 @@ _Note: SurfaceGPS requires Ionic CLI 3._
 
 ## Getting Started
 
-To test this application :
+A) To test this application :
+
+Install in your android smartphone : 
+https://play.google.com/store/apps/details?id=fr.joliciel.surfacegps
+
+B) To improve this application :
 
 1. Install the lastest version of the 
 [Ionic CLI](https://ionicframework.com/docs/cli/)
