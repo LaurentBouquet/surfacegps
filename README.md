@@ -21,8 +21,7 @@ SurfaceGPS is an application that calculates the area of a piece of land using t
 ###B) To improve this application:
 
 1. Install the lastest version of the 
-[Ionic CLI](https://ionicframework.com/docs/cli/)
-
+[Ionic CLI](https://ionicframework.com/docs/cli/)  
 _Note: SurfaceGPS requires Ionic CLI 3._
 
 2. Run:
