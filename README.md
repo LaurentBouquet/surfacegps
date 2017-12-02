@@ -4,24 +4,25 @@ SurfaceGPS is an application that calculates the area of a piece of land using t
 
 ## Getting Started
 
-A) To test this application :
+###A) To test this application:
 
 1. Go to [Play Store](https://play.google.com/store/apps/details?id=fr.joliciel.surfacegps) to install it in your android smartphone
 
 2. How to use SurfaceGPS?
 
-Step #1:
-In the parcels list, click on the top right to create a piece of land, give it a name, and click on the top right to save it.
+> Step #1:
+> In the parcels list, click on the top right to create a piece of land, give it a name, and click on the top right to save it.
 
-Step #2:
-Click on the piece in the pieces list, click on 'Save' and move on the land.
-This application will memorize your positions, as you move.
-Once at the starting point, click 'Stop', and the area in m² is displayed at the top right.
+> Step #2:
+> Click on the piece in the pieces list, click on 'Save' and move on the land.
+> This application will memorize your positions, as you move.
+> Once at the starting point, click 'Stop', and the area in m² is displayed at the top right.
 
-B) To improve this application :
+###B) To improve this application:
 
 1. Install the lastest version of the 
 [Ionic CLI](https://ionicframework.com/docs/cli/)
+
 _Note: SurfaceGPS requires Ionic CLI 3._
 
 2. Run:
