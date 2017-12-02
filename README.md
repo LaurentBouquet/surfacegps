@@ -2,20 +2,17 @@
 
 SurfaceGPS is an application that calculates the area of a piece of land using the GPS sensor of a smartphone.
 
-_Note: SurfaceGPS requires Ionic CLI 3._
-
-
 ## Getting Started
 
 A) To test this application :
 
-Install in your android smartphone : 
-https://play.google.com/store/apps/details?id=fr.joliciel.surfacegps
+Go to [Play Store](https://play.google.com/store/apps/details?id=fr.joliciel.surfacegps) to install it in your android smartphone
 
 B) To improve this application :
 
 1. Install the lastest version of the 
 [Ionic CLI](https://ionicframework.com/docs/cli/)
+_Note: SurfaceGPS requires Ionic CLI 3._
 
 2. Run:
 ```bash
