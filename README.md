@@ -2,6 +2,9 @@
 
 SurfaceGPS is an application that calculates the area of a piece of land using the GPS sensor of a smartphone.
 
+![Alt text]https://bytebucket.org/joliciel/surfacegps/raw/7c5e939ef557cec7441f5fb50ccf36607a4f933b/src/assets/img/ica-slidebox-img-3.png?token=d24e6ea54db464e6ea0f0192da0f2a48073750d5)
+
+
 ## Getting Started
 
 ###A) To test this application:
