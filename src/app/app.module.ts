@@ -9,6 +9,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SQLite } from '@ionic-native/sqlite'; 
+import { GoogleMaps } from "@ionic-native/google-maps";
 
 import { Items } from '../mocks/providers/items';
 import { Settings } from '../providers/providers';
@@ -32,8 +33,9 @@ export function provideSettings(storage: Storage) {
   return new Settings(storage, {
     option1: true,
     option2: 'pour tester',
-    option3: '3',
-    option4: 'pour tester (suite)'
+    option3: '18',
+    option4: 'pour tester (suite)',
+    option5: true
   });
 }
 
@@ -66,6 +68,7 @@ export function provideSettings(storage: Storage) {
     SplashScreen,
     StatusBar,
     SQLite,
+    GoogleMaps, 
     { provide: Settings, useFactory: provideSettings, deps: [Storage] },
     // Keep this to enable Ionic's runtime error handling during development
     { provide: ErrorHandler, useClass: IonicErrorHandler }

@@ -30,8 +30,12 @@ export class ListMasterPage {
    */
   addItem() {
     let addModal = this.modalCtrl.create('ItemCreatePage');
-    addModal.onDidDismiss(item => {
-      if (item) {
+    addModal.onDidDismiss(item_data => {
+      if (item_data) {
+        let item = new Item();
+        item.name = item_data.name;
+        item.about = item_data.about;
+        item.image = item_data.image;
         this.items.add(item);
       }
     })

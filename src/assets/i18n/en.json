@@ -11,8 +11,12 @@
   "TAB1_TITLE": "Pieces",
   "TAB2_TITLE": "Search",
   "TAB3_TITLE": "Settings",
+  "TAB4_TITLE": "About",
 
   "MAP_TITLE": "Map",
+
+  "APP_NAME": "SurfaceGPS",
+  "APP_DESCRIPTION": "Calculate the area of a piece of land using GPS.",
 
   "TUTORIAL_SKIP_BUTTON": "Skip",
   "TUTORIAL_CONTINUE_BUTTON": "Continue",
@@ -28,13 +32,14 @@
 
   "TUTORIAL_SLIDE4_TITLE": "Ready to Play?",
 
-  "WELCOME_INTRO": "The starting point for your next great Ionic app",
+  "WELCOME_INTRO": "Welcome to Surface GPS",
 
   "SETTINGS_TITLE": "Settings",
   "SETTINGS_OPTION1": "View the tutorial at startup",
   "SETTINGS_OPTION2": "Option 2",
-  "SETTINGS_OPTION3": "Position record (in seconds)",
+  "SETTINGS_OPTION3": "Map zoom",
   "SETTINGS_OPTION4": "Option 4",
+  "SETTINGS_OPTION5": "Enable GPS high accuracy",
 
   "SETTINGS_PROFILE_BUTTON": "Edit Profile",
 
@@ -64,9 +69,26 @@
   "DONE_BUTTON": "Done",
   "CANCEL_BUTTON": "Cancel",
   "DELETE_BUTTON": "Delete",
+  "STOP_BUTTON": "Stop",
+  "CLOSE_BUTTON": "Close",
+  "RESTART_BUTTON": "Restart",
+  "START_BUTTON": "Start",
+  "CONTINUE_BUTTON": "Continue",
+  "CLEAN_BUTTON": "Clean",
 
   "CARDS_TITLE": "Social",
 
   "SEARCH_TITLE": "Search",
-  "SEARCH_PLACEHOLDER": "Search a piece"
+  "SEARCH_PLACEHOLDER": "Search a piece",
+
+  "FORM_GPS_POINTS_NUMBER": "Number of GPS points:",
+  "FORM_SURFACE": "Surface:",
+  "RECORDING_POSITIONS": "Enregistrement des positions",
+  "QUESTION_START_RECORDING_AGAIN_OR_CONTINUE": "Recommencer l'enregistrement à zéro ou le poursuivre ?",
+  "QUESTION_CONFIRM_DELETE_PIECE": "Are you sure you want to permanently delete this piece?",
+  "QUESTION_CONFIRM_DELETE_ALL_POSITIONS": "Are you sure you want to delete all positions of this piece?",
+  "START_RECORDING": "Démarrage de l'enregistrement...",
+  "STOP_RECORDING": "Arrêt de l'enregistrement...",
+  "ALL_POSITIONS_ARE_DELETED": "Toutes les positions ont été effacées"
+
 }

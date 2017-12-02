@@ -2,42 +2,92 @@
 
   <ion-navbar>
     <ion-title>{{ item.name }}</ion-title>
+    <!--<ion-title>{{ item.name.substring(0, 10) }} - {{item.surface}} m²</ion-title> -->
+
+    <ion-buttons end>
+      <ion-badge color="danger">{{item.surface}} m²</ion-badge> 
+      <!--
+      <button ion-button icon-only (click)="showDetails(item)">
+        <ion-icon name="information"></ion-icon>
+      </button>
+      <button ion-button icon-only (click)="deletePiece(item)" [disabled]="isPositionRecording">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+    -->
+    </ion-buttons>
+
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content>
-  <div class="item-profile" text-center #image [style.background-image]="'url(' + item.image + ')'">
+
+  <div id="map" style="width:100%;height: 85%;" class="item-profile" text-center #image [style.background-image]="'url(' + item.image + ')'">
   </div>
 
-  <div class="item-detail" padding>
-    <h2>{{item.name}}</h2>
-    <p>{{item.about}}</p>
-
-    <button ion-button (click)="savePiece(item)"></button>
+  <div class="item-detail">
+    <!-- 
+      Chargement de la carte en cours...
+      <h2>{{item.name}}</h2> 
+      <p>{{item.about}}</p>
+    -->
 
     <ion-grid>
-      <ion-row>
-          <button ion-button large icon-left (click)="getPosition()" [disabled]="currentStep>2" strong>
+      <!--
+      <ion-row>      
+          <button ion-button large icon-left (click)="addCurrentPosition()" [disabled]="currentStep>2" strong>
             <ion-icon name="pin"></ion-icon>
             {{ 'SAVE_POSITION_BUTTON' | translate }}
-          </button>
+          </button>          
       </ion-row>
+      -->
       <ion-row>
-        <ion-col width-50 style="text-align: left">
-          <button ion-button icon-left (click)="done()" [disabled]="currentStep<2">
-            <ion-icon name="calculator"></ion-icon>
-            {{ 'CALC_SURFACE_BUTTON' | translate }}
+        <ion-col>
+
+          <button ion-button icon-left (click)="recordPoints()" [hidden]="isPositionRecording">
+            <ion-icon name="play"></ion-icon>
+            {{ 'SAVE_BUTTON' | translate }}
           </button>
-        </ion-col>
-        <ion-col width-50 style="text-align: right">
-          <button ion-button icon-left (click)="done()" [disabled]="currentStep<1">
-            <ion-icon name="refresh-circle"></ion-icon> 
+          <button ion-button icon-left (click)="unwatchPosition()" [hidden]="!isPositionRecording">
+            <ion-icon name="pause"></ion-icon>
+            {{ 'STOP_BUTTON' | translate }}
           </button>
+          <!--
+          <button ion-button icon-only (click)="calcSurface(item)" [disabled]="!isCalcReady">        
+              <ion-icon name="calculator"></ion-icon>
+          </button>
+          -->
+          <button ion-button icon-only (click)="confirmDeleteAllPoints(item)" [disabled]="1>currentStep || isPositionRecording">
+            <ion-icon name="rewind"></ion-icon>
+          </button>
+
+          <button ion-button icon-only (click)="showDetails(item)" [disabled]="isPositionRecording">
+              <ion-icon name="information-circle"></ion-icon>
+            </button>
+          <button ion-button icon-only (click)="deletePiece(item)" [disabled]="isPositionRecording">
+            <ion-icon name="trash"></ion-icon>
+          </button>
+
+          <!--
+            <ion-badge color="danger" item-end>{{item.surface}} m²</ion-badge> 
+
+          -->
+
         </ion-col>
+        
       </ion-row>
+
+
     </ion-grid>
+
+
+    <!--
+    <div id="map" style="width:100%;height: 400px;"></div>
+    -->
+
+
+    <!--<p>{{item.points.lenght}}</p>-->
 
   </div>
 
