@@ -11,23 +11,35 @@
   "TAB1_TITLE": "Parcelles",
   "TAB2_TITLE": "Recherche",
   "TAB3_TITLE": "Paramètres",
+  "TAB4_TITLE": "A propos",
 
   "MAP_TITLE": "Carte",
+
+  "APP_NAME": "SurfaceGPS",
+  "APP_DESCRIPTION": "Calculer la surface d'une parcelle de terre à l'aide du GPS.",
+
+  "TUTORIAL_SKIP_BUTTON": "Passer",
+  "TUTORIAL_CONTINUE_BUTTON": "Continuer",
 
   "TUTORIAL_SLIDE1_TITLE": "Bienvenue dans SurfaceGPS",
   "TUTORIAL_SLIDE1_DESCRIPTION": "<b>SurfaceGPS</b> vous permet de calculer facilement la surface d'une parcelle de terre à partir du GPS de votre smartphone.",
 
-  "TUTORIAL_SLIDE2_TITLE": "Comment utiliser SurfaceGPS",
-  "TUTORIAL_SLIDE2_DESCRIPTION": "Cliquer sur 'Créer une parcelle', puis enregistrer des positions GPS, et enfin cliquer sur 'Calculer la surface'.",
+  "TUTORIAL_SLIDE2_TITLE": "Comment utiliser SurfaceGPS  Etape n°1",
+  "TUTORIAL_SLIDE2_DESCRIPTION": "Dans la liste des parcelles, cliquez en haut à droite pour créer une parcelle, donnez lui un nom, puis cliquez en haut à droite pour l'enregistrer.",
 
-  "TUTORIAL_SLIDE3_TITLE": "Pour commencer",
-  "TUTORIAL_SLIDE3_DESCRIPTION": "Si vous avez besoin d’aide, consultez le README de SurfaceGPS pour un tutoriel complet.",
+  "TUTORIAL_SLIDE3_TITLE": "Comment utiliser SurfaceGPS  Etape n°2",
+  "TUTORIAL_SLIDE3_DESCRIPTION": "Cliquez sur la parcelle dans la liste des parcelles, cliquez sur 'Enregistrer' et déplacez vous sur le terrain. Une fois arrivé au point de départ, cliquez sur 'Arrêter'.",
+  
+  "TUTORIAL_SLIDE4_TITLE": "Vous êtes prêts ?",  
+
+  "WELCOME_INTRO": "Bienvenue dans SurfaceGPS",
 
   "SETTINGS_TITLE": "Paramètres",
   "SETTINGS_OPTION1": "Afficher le tutoriel au démarrage",
   "SETTINGS_OPTION2": "Option 2",
-  "SETTINGS_OPTION3": "Enregistrement de la position (secondes)",
+  "SETTINGS_OPTION3": "Zoom de la carte",
   "SETTINGS_OPTION4": "Option 4",
+  "SETTINGS_OPTION5": "Activer la haute précision GPS",
 
   "SETTINGS_PAGE_PROFILE": "Modifier le profil",
 
@@ -55,9 +67,27 @@
   "DONE_BUTTON": "Valider",
   "CANCEL_BUTTON": "Annuler",
   "DELETE_BUTTON": "Supprimer",
+  "STOP_BUTTON": "Arrêter",
+  "CLOSE_BUTTON": "Fermer",
+  "RESTART_BUTTON": "Redémarrer",
+  "START_BUTTON": "Démarrer",
+  "CONTINUE_BUTTON": "Continuer",
+  "CLEAN_BUTTON": "Nettoyer",
 
   "CARDS_TITLE": "Social",
 
   "SEARCH_TITLE": "Recherche",
-  "SEARCH_PLACEHOLDER": "Rechercher une parcelle"
+  "SEARCH_PLACEHOLDER": "Rechercher une parcelle",
+
+  "FORM_GPS_POINTS_NUMBER": "Nombre de points GPS :",
+  "FORM_SURFACE": "Surface :",
+  "RECORDING_POSITIONS": "Enregistrement des positions",
+  "QUESTION_START_RECORDING_AGAIN_OR_CONTINUE": "Recommencer l'enregistrement à zéro ou le poursuivre ?",
+  "QUESTION_CONFIRM_DELETE_PIECE": "Êtes-vous sûr de vouloir supprimer définitivement cette parcelle ?",
+  "QUESTION_CONFIRM_DELETE_ALL_POSITIONS": "Êtes-vous sûr de vouloir supprimer toutes les positions de cette parcelle ?",
+  "START_RECORDING": "Démarrage de l'enregistrement...",
+  "STOP_RECORDING": "Arrêt de l'enregistrement...",
+  "ALL_POSITIONS_ARE_DELETED": "Toutes les positions ont été effacées"
+
+
 }

@@ -17,15 +17,14 @@ export class Items {
     "name": "Unknow",
     "about": "",
     "image": "",
-    "points": "",
+    "points": [],
     "surface": 0,
     "step": 0
-
   };
 
 
   constructor(private sqlite: SQLite, private toastCtrl: ToastController, public events: Events) {
-    this.createDatabaseFile();    
+   this.createDatabaseFile();    
   }
 
   private presentToast(message: string) {
@@ -63,21 +62,33 @@ export class Items {
   }
 
   public getData(): Item[] {
-    this.db.executeSql('SELECT * FROM pieces ORDER BY rowid ASC ;', {})
+      this.db.executeSql('SELECT * FROM pieces ORDER BY name ASC ;', {})
       .then((data: any) => { 
         this.items = [];
         console.debug(data.rows.length);
         for(var i=0; i<data.rows.length; i++) { 
           let row = data.rows.item(i);
-          let item = new Item(this.defaultItem);
+          let item = new Item();
           item.rowid = row.rowid;
-          item.name = row.name;
-          item.about = row.about;
+          item.name = row.name;          
+          if (row.about != NaN) {
+            item.about = row.about;
+          }
           item.image = row.image;
-          item.points = row.points;
+
+          ///this.presentToast("row.points = " + row.points);
+          let sql_points = JSON.parse(row.points);          
+          if (sql_points != null) {
+            for(var j=0; j<sql_points.length; j++) {
+              ///this.presentToast("item.points.latitude = " + sql_points[j].latitude);
+              item.addPoint(sql_points[j].latitude, sql_points[j].longitude);
+            }
+          }
+
           item.surface = row.surface; 
           item.step = row.step;
-          console.debug(item.name); 
+
+          //this.presentToast("getData() " + item); 
           this.items.push(item);
         }
         this.events.publish('items:loaded', this.items, Date.now());
@@ -106,14 +117,48 @@ export class Items {
   }
 
   public add(item: Item) {
-    this.items.push(item); 
-    let data = [item.name, item.about, item.image, item.points, item.surface ? item.surface : 0, item.step ? item.step : 0];    
+    let data = [item.name, item.about, item.image, JSON.stringify(item.points), item.surface ? item.surface : 0, item.step ? item.step : 0];    
     this.db.executeSql('INSERT INTO pieces (name, about, image, points, surface, step) VALUES (?, ?, ?, ?, ?, ?) ;', data)
-      .then(() => console.debug('New piece "'+item.name+'" created'))
+      .then((res) => {
+        item.rowid = res.insertId;
+        this.items.push(item); 
+      })
       .catch(e => this.presentToast(e.message));
   }
 
-  public delete(item: Item) {
-    this.items.splice(this.items.indexOf(item), 1);
+  /*
+  public save(item: Item) {
+    let data = [item.name, item.about, item.image, JSON.stringify(item.points), item.surface ? item.surface : 0, item.step ? item.step : 0, item.rowid];    
+    this.db.executeSql('UPDATE pieces SET name=?, about=?, image=?, points=?, surface=?, step=? WHERE rowid=?   ;', data)
+      .then(() => console.log('Piece "'+item.name+'" updated'))
+      .catch(e => this.presentToast(e.message));
   }
+  */
+  public save(item: Item): Promise<string> {
+    let promise = new Promise<string>((resolve, reject) => {
+      try {
+        let data = [item.name, item.about, item.image, JSON.stringify(item.points), item.surface ? item.surface : 0, item.step ? item.step : 0, item.rowid];    
+        this.db.executeSql('UPDATE pieces SET name=?, about=?, image=?, points=?, surface=?, step=? WHERE rowid=?   ;', data)
+          .then(() => console.log('Piece "'+item.name+'" updated'))
+          .catch(e => this.presentToast(e.message));
+        resolve('Item saved');    
+      } catch (error) {
+        reject('Error saving item: ' + error.message);  
+      }
+    });  
+    return promise; 
+  }
+
+  public delete(item: Item) {
+    let data = [item.rowid];    
+    this.db.executeSql('DELETE FROM pieces WHERE rowid=? ;', data)
+    .then(() => {
+      console.log('Piece "'+item.name+'" deleted');
+      this.items.splice(this.items.indexOf(item), 1);      
+    })
+    .catch(e => this.presentToast(e.message));
+}
+
+
+
 }

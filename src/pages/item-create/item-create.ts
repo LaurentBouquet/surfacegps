@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Camera } from '@ionic-native/camera';
 import { IonicPage, NavController, ViewController } from 'ionic-angular';
 
+import { Item } from '../../models/item';
+
 @IonicPage()
 @Component({
   selector: 'page-item-create',
@@ -13,7 +15,7 @@ export class ItemCreatePage {
 
   isReadyToSave: boolean;
 
-  item: any;
+  item: Item;
 
   form: FormGroup;
 
@@ -28,10 +30,6 @@ export class ItemCreatePage {
     this.form.valueChanges.subscribe((v) => {
       this.isReadyToSave = this.form.valid;
     });
-  }
-
-  ionViewDidLoad() {
-
   }
 
   getPicture() {

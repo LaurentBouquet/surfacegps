@@ -25,13 +25,37 @@ $background-color:  #fff;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
-  secondary:  #32db64,
-  danger:     #f53d3d,
+  primary:    #00B6BF,
+  secondary:  #81E082,
+  danger:     #FEC150,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #5555FF
 );
 
+$toolbar-background:    #00B6BF;
+
+h1 {
+  color: #81E082;
+}
+h2 {
+  color: #60B760;
+}
+h3 {
+  color: #5555FF;
+}
+h4 {
+  color: #60B760;
+}
+h5 {
+  color: #00B6BF;
+}
+h6 {
+  color: #5555FF;
+}
+
+img[src=""] {
+  display: none;
+}
 
 // App iOS Variables
 // --------------------------------------------------
