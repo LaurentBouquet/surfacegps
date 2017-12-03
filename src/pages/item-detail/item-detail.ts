@@ -38,6 +38,7 @@ export class ItemDetailPage {
   isMapReady: Boolean = false;
   isCalcReady: Boolean = false;
   isPositionRecording: Boolean = false;
+  isPositionGetting: Boolean = false;
 
   watchId: any;
 
@@ -120,22 +121,26 @@ export class ItemDetailPage {
    */
   public addCurrentPosition() {
     if (this.currentStep>2) { return; }  
+    this.isPositionGetting = true;
     this.getPosition().then((currentPoint) => {
         this.presentToast('Position: ' + currentPoint.latitude + ', ' + currentPoint.longitude); 
         this.item.addPoint(currentPoint.latitude, currentPoint.longitude);   
         this.pointsGoogle.push(new LatLng(currentPoint.latitude, currentPoint.longitude));
         this.drawPolygon();  
-        this.item.step = this.setCurrentStep();     
+        this.item.step = this.setCurrentStep(); 
+        this.calcSurface(this.item);
         this.items.save(this.item);  
+        this.isPositionGetting = false;
     }).catch((error)=> {
-        this.presentToast(error);  
+        this.presentToast(error); 
+        this.isPositionGetting = false; 
     });  
   }
 
   /**
    * Get the actual GPS position (only one position)
    */
-  private getPosition(): Promise<Point> {
+  private getPosition(): Promise<Point> {    
     let promise = new Promise<Point>((resolve, reject) => {
       this.geolocation.getCurrentPosition({enableHighAccuracy: true}).then((resp) => {        
         resolve(new Point(resp.coords.latitude, resp.coords.longitude));
@@ -152,6 +157,7 @@ export class ItemDetailPage {
    * or to delete all points and start a new watching 
    */
   public recordPoints() {
+    this.isPositionGetting = false;
     if (this.item.points.length>0) {
       let confirm = this.alertCtrl.create({
         title: this.lang.RECORDING_POSITIONS,

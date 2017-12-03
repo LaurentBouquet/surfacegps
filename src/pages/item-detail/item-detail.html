@@ -20,30 +20,29 @@
       <ion-row>
         <ion-col>
 
-          <button ion-button icon-left (click)="recordPoints()" [hidden]="isPositionRecording">
+          <button ion-button small icon-left (click)="recordPoints()" [hidden]="isPositionRecording" [disabled]="isPositionGetting">
             <ion-icon name="play"></ion-icon>
             {{ 'SAVE_BUTTON' | translate }}
           </button>
 
-          <button ion-button icon-left (click)="unwatchPosition()" [hidden]="!isPositionRecording">
+          <button ion-button small icon-left (click)="unwatchPosition()" [hidden]="!isPositionRecording" [disabled]="isPositionGetting">
             <ion-icon name="pause"></ion-icon>
             {{ 'STOP_BUTTON' | translate }}
           </button>
 
-          <button ion-button large icon-left (click)="addCurrentPosition()" [disabled]="currentStep>2" strong>
+          <button ion-button small icon-only (click)="addCurrentPosition()" [disabled]="currentStep>2 || isPositionRecording || isPositionGetting">
             <ion-icon name="pin"></ion-icon>
-            {{ 'SAVE_POSITION_BUTTON' | translate }}
           </button>          
 
-          <button ion-button icon-only (click)="confirmDeleteAllPoints(item)" [disabled]="1>currentStep || isPositionRecording">
+          <button ion-button small icon-only (click)="confirmDeleteAllPoints(item)" [disabled]="1>currentStep || isPositionRecording || isPositionGetting">
             <ion-icon name="rewind"></ion-icon>
           </button>
 
-          <button ion-button icon-only (click)="showDetails(item)" [disabled]="isPositionRecording">
+          <button ion-button small icon-only (click)="showDetails(item)" [disabled]="isPositionRecording || isPositionGetting">
               <ion-icon name="information-circle"></ion-icon>
             </button>
 
-            <button ion-button icon-only (click)="deletePiece(item)" [disabled]="isPositionRecording">
+            <button ion-button small icon-only (click)="deletePiece(item)" [disabled]="isPositionRecording || isPositionGetting">
             <ion-icon name="trash"></ion-icon>
           </button>
 

@@ -2,9 +2,6 @@ import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { IonicPage, NavController, ToastController } from 'ionic-angular';
 
-import { User } from '../../providers/providers';
-//import { MainPage } from '../pages';
-
 declare function require(url: string);
 
 @IonicPage()
@@ -20,7 +17,7 @@ export class AboutPage {
   versionCode: string;
   versionNumber: string;
 
-  constructor(public navCtrl: NavController, public user: User, public toastCtrl: ToastController, public translateService: TranslateService) {
+  constructor(public navCtrl: NavController, public toastCtrl: ToastController, public translateService: TranslateService) {
     var pckg = require('../../../package.json');
     this.versionNumber = pckg.version;
   }
