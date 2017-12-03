@@ -1,0 +1,41 @@
+<ion-header> 
+
+  <ion-navbar>
+    <ion-title>{{ 'TAB4_TITLE' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content text-center padding>
+
+  <h1>{{ 'APP_NAME' | translate }}</h1>
+  <h6>{{ 'APP_DESCRIPTION' | translate }}</h6>
+
+  <img src="assets/img/appicon-128.png"  width="128"/>
+
+  <ion-list no-lines>
+
+    <ion-item>
+      <ion-icon name="build" item-start color="primary"></ion-icon>
+      Version {{versionNumber}}
+    </ion-item> 
+
+    <ion-item>
+      <ion-icon name="contact" item-start color="primary"></ion-icon>
+      Laurent BOUQUET
+    </ion-item> 
+
+    <ion-item (click)="mailto('laurent.bouquet@joliciel.fr', 'SurfaceGPS')">
+      <ion-icon name="mail" item-start color="primary"></ion-icon>            
+      <a target="_blank" src="mailto:laurent.bouquet@joliciel.fr">laurent.bouquet@joliciel.fr</a>
+    </ion-item> 
+
+    <ion-item (click)="browseto('https://www.joliciel.fr/')">
+      <ion-icon name="globe" item-start color="primary"></ion-icon>
+      <a target="_blank" src="https://www.joliciel.fr/">https://www.joliciel.fr/</a>
+    </ion-item> 
+
+  </ion-list>
+  
+</ion-content>
