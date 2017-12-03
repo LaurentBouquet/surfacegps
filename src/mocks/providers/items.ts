@@ -1,4 +1,8 @@
-import { Injectable } from '@angular/core';
+/**
+ * Service that manages creating instances of Item
+ */
+
+ import { Injectable } from '@angular/core';
 import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 import { ToastController, Events } from 'ionic-angular';
 
@@ -22,23 +26,26 @@ export class Items {
     "step": 0
   };
 
-
   constructor(private sqlite: SQLite, private toastCtrl: ToastController, public events: Events) {
    this.createDatabaseFile();    
   }
 
-  private presentToast(message: string) {
+  /**
+   * Show a Toast (a little text popup) 
+   * on the top of the smartphone screen
+   */
+  private presentToast(message: string, duration: number = 3000) {
     let toast = this.toastCtrl.create({
       message: message,
-      duration: 3000,
+      duration: duration,
       position: 'top'
-    });  
-    toast.onDidDismiss(() => {
-      console.log('Dismissed toast');
-    });  
+    });
     toast.present();
   }
 
+  /**
+   * Create a SQLite database file (if it does not exist)
+   */
   private createDatabaseFile(): void { 
     this.sqlite.create({
       name: DATABASE_FILE_NAME,
@@ -52,6 +59,9 @@ export class Items {
       .catch(e => this.presentToast(e.message)); 
   }
 
+  /**
+   * Create table "pieces" (if not exists) in SQLite database
+   */  
   private createTables(): void {
     this.db.executeSql('CREATE TABLE IF NOT EXISTS "pieces" ( `rowid` INTEGER PRIMARY KEY AUTOINCREMENT, `name` TEXT NOT NULL, `about` TEXT NOT NULL, `image` BLOB, `points` BLOB, `surface` REAL NOT NULL DEFAULT 0, `step` INTEGER NOT NULL DEFAULT 0  ) ;', {})
       .then(() => {
@@ -61,6 +71,9 @@ export class Items {
       .catch(e => this.presentToast(e.message));
   }
 
+  /**
+   * Get all items from SQLite database
+   */  
   public getData(): Item[] {
       this.db.executeSql('SELECT * FROM pieces ORDER BY name ASC ;', {})
       .then((data: any) => { 
@@ -76,11 +89,9 @@ export class Items {
           }
           item.image = row.image;
 
-          ///this.presentToast("row.points = " + row.points);
           let sql_points = JSON.parse(row.points);          
           if (sql_points != null) {
             for(var j=0; j<sql_points.length; j++) {
-              ///this.presentToast("item.points.latitude = " + sql_points[j].latitude);
               item.addPoint(sql_points[j].latitude, sql_points[j].longitude);
             }
           }
@@ -88,7 +99,6 @@ export class Items {
           item.surface = row.surface; 
           item.step = row.step;
 
-          //this.presentToast("getData() " + item); 
           this.items.push(item);
         }
         this.events.publish('items:loaded', this.items, Date.now());
@@ -97,8 +107,10 @@ export class Items {
     return this.items;
   }
 
-
-
+  /**
+   * Search for a term in the items name
+   * and return the list of items that match
+   */    
   public query(params?: any): Item[] {
     if (!params) {
       return this.items;
@@ -116,6 +128,9 @@ export class Items {
     });
   }
 
+  /**
+   * Insert item ("Item" object) in SQLite database
+   */
   public add(item: Item) {
     let data = [item.name, item.about, item.image, JSON.stringify(item.points), item.surface ? item.surface : 0, item.step ? item.step : 0];    
     this.db.executeSql('INSERT INTO pieces (name, about, image, points, surface, step) VALUES (?, ?, ?, ?, ?, ?) ;', data)
@@ -126,14 +141,9 @@ export class Items {
       .catch(e => this.presentToast(e.message));
   }
 
-  /*
-  public save(item: Item) {
-    let data = [item.name, item.about, item.image, JSON.stringify(item.points), item.surface ? item.surface : 0, item.step ? item.step : 0, item.rowid];    
-    this.db.executeSql('UPDATE pieces SET name=?, about=?, image=?, points=?, surface=?, step=? WHERE rowid=?   ;', data)
-      .then(() => console.log('Piece "'+item.name+'" updated'))
-      .catch(e => this.presentToast(e.message));
-  }
-  */
+  /**
+   * Save item ("Item" object) in SQLite database
+   */
   public save(item: Item): Promise<string> {
     let promise = new Promise<string>((resolve, reject) => {
       try {
@@ -149,6 +159,9 @@ export class Items {
     return promise; 
   }
 
+  /**
+   * Delete item ("Item" object) in SQLite database
+   */
   public delete(item: Item) {
     let data = [item.rowid];    
     this.db.executeSql('DELETE FROM pieces WHERE rowid=? ;', data)
@@ -157,8 +170,6 @@ export class Items {
       this.items.splice(this.items.indexOf(item), 1);      
     })
     .catch(e => this.presentToast(e.message));
-}
-
-
+  }
 
 }
