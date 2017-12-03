@@ -1,9 +1,7 @@
-//import { promisify } from '@ionic/app-scripts/dist/util/promisify';
 import { Component } from '@angular/core';
 import { AlertOptions, IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TranslateService } from '@ngx-translate/core';
 import { Geolocation, } from '@ionic-native/geolocation';
-//import { Geoposition } from '@ionic-native/geolocation';
 import { ViewController, ToastController, AlertController } from 'ionic-angular';
 import {
     GoogleMap,
@@ -14,13 +12,10 @@ import {
     PolygonOptions,
     Spherical,
 } from '@ionic-native/google-maps';
-//import { Marker, PolylineOptions } from '@ionic-native/google-maps';
-//import { Observable } from 'rxjs/Observable';
 import { Settings } from '../../providers/providers';
 
 import { Items } from '../../providers/providers';
 import { Item, Point } from '../../models/item';
-//import { Observable } from 'rxjs/Observable';
 
 export enum Step {NoPosition, OneOrTwoPosition, ManyPositions, AreaCalculated}
 
@@ -48,10 +43,10 @@ export class ItemDetailPage {
 
   constructor(public navCtrl: NavController, private translate: TranslateService, public viewCtrl: ViewController, navParams: NavParams, settings: Settings, private toastCtrl: ToastController, public alertCtrl: AlertController, private items: Items, private geolocation: Geolocation, public googleMaps: GoogleMaps) {
     
-    //item
+    // Item
     this.item = navParams.get('item') || items.defaultItem;
     
-    //settings
+    // Settings
     settings.getValue('option5').then(
       val => {
         this.enableHighAccuracy = val;
@@ -67,7 +62,7 @@ export class ItemDetailPage {
       this.mapZoom = 18;
     });
     
-    //translation
+    // Translation
     this.translate.get([
         'FORM_GPS_POINTS_NUMBER', 
         'FORM_SURFACE', 
@@ -106,25 +101,24 @@ export class ItemDetailPage {
     this.savePiece(this.item);
   }
 
-  private presentToast(message: string) {
+  /**
+   * Show a Toast (a little text popup) 
+   * on the top of the smartphone screen
+   */
+  private presentToast(message: string, duration: number = 3000) {
     let toast = this.toastCtrl.create({
       message: message,
-      duration: 3000,
+      duration: duration,
       position: 'top'
     });
-    /*  
-    toast.onDidDismiss(() => {
-      console.log('Dismissed toast');
-    });  
-    */
     toast.present();
   }
 
   /**
-   * 
+   * Add the actual GPS position 
+   * to the list of position "pointsGoogle[]"
    */
-  /*public addCurrentPosition() {
-    //this.presentToast("" + this.item.name);
+  public addCurrentPosition() {
     if (this.currentStep>2) { return; }  
     this.getPosition().then((currentPoint) => {
         this.presentToast('Position: ' + currentPoint.latitude + ', ' + currentPoint.longitude); 
@@ -136,18 +130,16 @@ export class ItemDetailPage {
     }).catch((error)=> {
         this.presentToast(error);  
     });  
-  }*/
+  }
 
   /**
-   * The user is done and wants to create the item, so return it
-   * back to the presenter.
+   * Get the actual GPS position (only one position)
    */
   private getPosition(): Promise<Point> {
     let promise = new Promise<Point>((resolve, reject) => {
       this.geolocation.getCurrentPosition({enableHighAccuracy: true}).then((resp) => {        
         resolve(new Point(resp.coords.latitude, resp.coords.longitude));
       }).catch((error) => {
-        //this.presentToast('Error getting location ' + error.message);
         reject('Error getting location ' + error.message);
       });
     });  
@@ -156,7 +148,8 @@ export class ItemDetailPage {
 
 
   /**
-   * 
+   * Show a popup to continue watching GPS position
+   * or to delete all points and start a new watching 
    */
   public recordPoints() {
     if (this.item.points.length>0) {
@@ -190,9 +183,9 @@ export class ItemDetailPage {
     }    
   }    
 
-/**
-   * The user is done and wants to create the item, so return it
-   * back to the presenter.
+  /**
+   * Start watching GPS position 
+   * and save it in the list of position "pointsGoogle[]"
    */
   public watchPosition(): void {
     this.isPositionRecording = true;
@@ -202,40 +195,33 @@ export class ItemDetailPage {
       timeout: 30000,
       maximumAge: 0
     };
-    ///this.getPosition().then((currentPoint) => {
-      // Add watch
-      this.watchId = navigator.geolocation.watchPosition((position) => { 
-        this.presentToast(position.coords.longitude + ' - ' + position.coords.latitude);
-        this.item.addPoint(position.coords.latitude, position.coords.longitude);     
-        this.pointsGoogle.push(new LatLng(position.coords.latitude, position.coords.longitude));
-        this.drawPolygon();  
-        this.item.step = this.setCurrentStep();     
-        //this.items.save(this.item); 
-      }, (error) => {
-        this.presentToast(error);  
-      }, options);
-    ///}).catch((error)=> {
-        ///this.presentToast(error);  
-    ///});        
+    this.watchId = navigator.geolocation.watchPosition((position) => { 
+      this.presentToast(position.coords.longitude + ' - ' + position.coords.latitude, 1000);
+      this.item.addPoint(position.coords.latitude, position.coords.longitude);     
+      this.pointsGoogle.push(new LatLng(position.coords.latitude, position.coords.longitude));
+      this.drawPolygon();  
+      this.item.step = this.setCurrentStep();     
+    }, (error) => {
+      this.presentToast(error);  
+    }, options);
   }
 
+  /**
+   * Stop watching GPS position
+   */  
   public unwatchPosition(): void {  
     this.isPositionRecording = false;   
     this.presentToast(this.lang.STOP_RECORDING); 
-    //this.getPosition().then((currentPoint) => {         
-      navigator.geolocation.clearWatch(this.watchId);      
-      //this.presentToast('Watching position is stopping');
-      this.item.step = this.setCurrentStep();   
-      this.calcSurface(this.item);
-      this.items.save(this.item); 
-    /*}).catch((error)=> {
-        this.presentToast(error);  
-    });*/
+    navigator.geolocation.clearWatch(this.watchId);      
+    this.item.step = this.setCurrentStep();   
+    this.calcSurface(this.item);
+    this.items.save(this.item); 
   }
 
 
   /*
-   * Set currentStep value according to the number of points
+   * Set the step (currentStep) value according to the number of points
+   * (NoPosition, OneOrTwoPosition, ManyPositions or AreaCalculated)
    */
   private setCurrentStep(): Step {
     if (this.item.points == null) {
@@ -269,20 +255,19 @@ export class ItemDetailPage {
     return this.currentStep;
   }
 
-
   /**
-   * 
+   * Save the current "Item" object
    */
   private savePiece(item:Item) {
     this.items.save(item).then((resp)=>{
-      //Nothing to do
+      // Nothing to do
     }).catch((error)=>{
       this.presentToast('Error saving piece ' + error.message);       
     });
   }
 
-    /**
-   * 
+  /**
+   * Initialize the Google Map, load all points, and draw the polygon on it
    */
   private initMap(startPoint:Point, mapZoom) {
     let mapOptions: GoogleMapOptions = {
@@ -297,10 +282,9 @@ export class ItemDetailPage {
     };
     let element: HTMLElement = document.getElementById('map');
     this.mapGoogle = GoogleMaps.create(element, mapOptions);  
-    // Wait the MAP_READY before using any methods.
     if (this.mapGoogle != undefined) {
+      // Wait the MAP_READY before using any methods.
       this.mapGoogle.one(GoogleMapsEvent.MAP_READY).then(() => {  
-        //this.presentToast("MAP is ready !");  
         this.isMapReady = true;
         if (this.currentStep>2) {
           this.isCalcReady = true;
@@ -309,13 +293,10 @@ export class ItemDetailPage {
         }    
         let currentPointGoogle: LatLng;
         for(var i=0; i<this.item.points.length; i++) { 
-          //this.presentToast("(" + item.points[i].latitude + ", " + item.points[i].longitude + ")");  
-          // GoogleMaps
           currentPointGoogle = new LatLng(this.item.points[i].latitude, this.item.points[i].longitude);
           this.pointsGoogle.push(currentPointGoogle);
         }             
         this.drawPolygon();
-        //this.calcSurface(this.item);
       }).catch((error) => {
         this.presentToast('Error initializing map ' + error.message);
       });     
@@ -323,7 +304,7 @@ export class ItemDetailPage {
   }
     
   /**
-   * 
+   * Call the Google Map function "addPolygon()" to draw a polygon on the map, representing the piece
    */
   public drawPolygon() {
     //this.items.save(item); //Don't execute this action
@@ -335,9 +316,9 @@ export class ItemDetailPage {
             'strokeColor': '#5555FF',
             'strokeWidth': 1,
             'fillColor': '#81E082'
-          }; //khaki="#f0e68c" / red="#ff0000" / 'black' / 'red'
+          }; 
           this.mapGoogle.addPolygon(polygonOptions).then((resp) => {  
-            //Nothing to do            
+            // Nothing to do            
           }).catch((error) => {
             this.presentToast('Error adding polyline ' + error.message);        
           });        
@@ -348,6 +329,9 @@ export class ItemDetailPage {
     });
   }
 
+  /**
+   * Call the Google Map function "computeArea()" to calc the surface of the piece from positions
+   */
   public calcSurface(item:Item) {
     if (this.item.points.length>0) {
       let currentSphericalGoogle: Spherical = new Spherical();
@@ -361,9 +345,8 @@ export class ItemDetailPage {
     this.presentToast(this.lang.FORM_SURFACE + " " + item.surface + " m²"); 
   }
 
-
   /**
-   * 
+   * Show a popup to confirm deletion of all points of the piece 
    */
   public confirmDeleteAllPoints(item:Item) {
     let confirm = this.alertCtrl.create({
@@ -373,7 +356,7 @@ export class ItemDetailPage {
         {
           text: this.lang.CANCEL_BUTTON,
           handler: () => {
-            //nothing
+            // Nothing to do 
           }
         },
         {
@@ -391,6 +374,9 @@ export class ItemDetailPage {
     confirm.present();  
   }
 
+  /**
+   * Function called by confirmDeleteAllPoints()
+   */
   private deleteAllPoints(): Promise<string> {
     let promise = new Promise<string>((resolve, reject) => {
       try {
@@ -416,10 +402,9 @@ export class ItemDetailPage {
   } 
 
   /**
-   * 
+   * Show a popup to confirm deletion of the piece
    */
   public deletePiece(item:Item) {
-    //Êtes-vous sûr de vouloir supprimer définitivement cette pièce?
     let confirm = this.alertCtrl.create({
       title: this.lang.DELETE_BUTTON + ' "' + item.name + '"',
       message: this.lang.QUESTION_CONFIRM_DELETE_PIECE,
@@ -427,7 +412,7 @@ export class ItemDetailPage {
         {
           text: this.lang.CANCEL_BUTTON,
           handler: () => {
-            //nothing
+            // Nothing to do
           }
         },
         {
@@ -443,7 +428,7 @@ export class ItemDetailPage {
   }  
 
   /**
-   * 
+   * Show a popup to display details of the piece (name, about, points number, surface)
    */
   public showDetails(item:Item) {
     let opts:AlertOptions = {
@@ -458,24 +443,5 @@ export class ItemDetailPage {
 
     
   }
-
-  /*
-    translate.get(["TUTORIAL_SLIDE1_TITLE",
-      "TUTORIAL_SLIDE1_DESCRIPTION",
-      "TUTORIAL_SLIDE2_TITLE",
-      "TUTORIAL_SLIDE2_DESCRIPTION",
-      "TUTORIAL_SLIDE3_TITLE",
-      "TUTORIAL_SLIDE3_DESCRIPTION",
-    ]).subscribe((values) => {
-      console.log('Loaded values', values);
-      this.slides = [
-        {
-          title: values.TUTORIAL_SLIDE1_TITLE,
-          description: values.TUTORIAL_SLIDE1_DESCRIPTION,
-          image: 'assets/img/ica-slidebox-img-1.png',
-        }
-      ];
-    });
-    */
 
 }
