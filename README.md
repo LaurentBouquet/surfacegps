@@ -2,12 +2,12 @@
 
 SurfaceGPS is an application that calculates the area of a piece of land using the GPS sensor of a smartphone.
 
-![Alt text](https://bytebucket.org/joliciel/surfacegps/raw/7c5e939ef557cec7441f5fb50ccf36607a4f933b/src/assets/img/ica-slidebox-img-3.png?token=d24e6ea54db464e6ea0f0192da0f2a48073750d5)
+![Alt text](https://github.com/LaurentBouquet/surfacegps/blob/master/src/assets/img/ica-slidebox-img-3.png)
 
 
 ## Getting Started
 
-###A) To test this application:
+##A) To test this application:
 
 1. Go to [Play Store](https://play.google.com/store/apps/details?id=fr.joliciel.surfacegps) to install it in your android smartphone
 
@@ -21,7 +21,7 @@ SurfaceGPS is an application that calculates the area of a piece of land using t
 > This application will memorize your positions, as you move.
 > Once at the starting point, click 'Stop', and the area in m² is displayed at the top right.
 
-###B) To improve this application:
+##B) To improve this application:
 
 1. Install the lastest version of the 
 [Ionic CLI](https://ionicframework.com/docs/cli/)  
