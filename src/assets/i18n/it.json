@@ -8,7 +8,7 @@
   "LOGIN": "Login",
   "SIGNUP": "Registrati",
 
-  "TAB1_TITLE": "Elenco",
+  "TAB1_TITLE": "Pacchi di terra",
   "TAB2_TITLE": "Ricerca",
   "TAB3_TITLE": "Impostazioni",
 
@@ -17,24 +17,24 @@
   "TUTORIAL_SKIP_BUTTON": "Salta",
   "TUTORIAL_CONTINUE_BUTTON": "Continua",
 
-  "TUTORIAL_SLIDE1_TITLE": "Benvenuti in Ionic Super Starter",
-  "TUTORIAL_SLIDE1_DESCRIPTION": "<b>Ionic Super Starter</b> è un applicazione di partenza per Ionic che contiene molte pagine di esempio già pronte realizzate seguendo delle best practices.",
+  "TUTORIAL_SLIDE1_TITLE": "Benvenuti in SurfaceGPS",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "<b> SurfaceGPS </ b> ti consente di calcolare facilmente l'area di un appezzamento di terreno dal GPS del tuo smartphone.",
 
-  "TUTORIAL_SLIDE2_TITLE": "Come usare Super Starter",
-  "TUTORIAL_SLIDE2_DESCRIPTION": "Mantenete le pagine che volete e rimuovete quelle che non vi servono. Troverete diverse pagine di uso comune in questa applicazione come le pagine per il login e la registrazione, layout con tabs, e questa pagina di tutorial.",
+  "TUTORIAL_SLIDE2_TITLE": "Come utilizzare SurfaceGPS? Passo 1",
+  "TUTORIAL_SLIDE2_DESCRIPTION": "Nell'elenco dei pacchi, fai clic in alto a destra per creare un pacco, dargli un nome, quindi fare clic in alto a destra per salvarlo.",
 
-  "TUTORIAL_SLIDE3_TITLE": "Come iniziare",
-  "TUTORIAL_SLIDE3_DESCRIPTION": "Serve aiuto? Leggete il README del progetto Super Starter per avere maggiori informazioni sul tutorial completo.",
-
+  "TUTORIAL_SLIDE3_TITLE": "Come utilizzare SurfaceGPS? Step # 2",
+  "TUTORIAL_SLIDE3_DESCRIPTION": "Fai clic sul pacco nell'elenco dei pacchi, fai clic su 'Salva' e vai al campo. Dopo essere arrivato al punto di partenza, fai clic su 'Stop'.",
   "TUTORIAL_SLIDE4_TITLE": "Pronti ad iniziare?",
 
   "WELCOME_INTRO": "Il punto di partenza per la tua prossima applicazione Ionic",
 
   "SETTINGS_TITLE": "Impostazioni",
-  "SETTINGS_OPTION1": "Opzione 1",
-  "SETTINGS_OPTION2": "Opzione 2",
-  "SETTINGS_OPTION3": "Opzione 3",
-  "SETTINGS_OPTION4": "Opzione 4",
+  "SETTINGS_OPTION1": "Mostra tutorial all'avvio",
+  "SETTINGS_OPTION2": "Opzione 2",
+  "SETTINGS_OPTION3": "Zoom map",
+  "SETTINGS_OPTION4": "Opzione 4",
+  "SETTINGS_OPTION5": "Abilita alta precisione GPS",
 
   "SETTINGS_PROFILE_BUTTON": "Modifica Profilo",
 
@@ -49,9 +49,9 @@
   "SIGNUP_ERROR": "Non è possibile creare l'utente. Assicurarsi di aver inserito le informazioni utente correttamente e poi riprovare.",
   "SIGNUP_BUTTON": "Registrati",
 
-  "LIST_MASTER_TITLE": "Elenco elementi",
+  "LIST_MASTER_TITLE": "Pacchi di terra",
 
-  "ITEM_CREATE_TITLE": "Nuovo elemento",
+  "ITEM_CREATE_TITLE": "Nuovo appezzamento di terreno",
   "ITEM_CREATE_CHOOSE_IMAGE": "Aggiungi immagine",
 
   "ITEM_NAME_PLACEHOLDER": "Nome",
@@ -64,5 +64,5 @@
   "CARDS_TITLE": "Social",
 
   "SEARCH_TITLE": "Ricerca",
-  "SEARCH_PLACEHOLDER": "Trova elementi in lista, ex. \"Donald Duck\""
+  "SEARCH_PLACEHOLDER": "Trova elementi in lista"
 }

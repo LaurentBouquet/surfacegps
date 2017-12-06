@@ -2,36 +2,44 @@
   "BACK_BUTTON_TEXT": "Zurück",
 
   "NAME": "Name",
+  "USERNAME": "Nutzername",
   "PASSWORD": "Passwort",
   "EMAIL": "Email",
   "LOGIN": "Anmelden",
   "SIGNUP": "Registrieren",
-  "CANCEL_BUTTON": "Schließen",
 
   "TAB1_TITLE": "Items",
   "TAB2_TITLE": "Suche",
   "TAB3_TITLE": "Einstellung",
+  "TAB4_TITLE": "About",
 
   "MAP_TITLE": "Karte",
 
-  "TUTORIAL_SLIDE1_TITLE": "Hallo Ionic Super Starter App",
-  "TUTORIAL_SLIDE1_DESCRIPTION": "Die <b>Ionic Super Starter App</b> ist eine umfangreiche Starter App mit vielen vorgefertigten Seiten und Best Practices.",
+  "APP_NAME": "SurfaceGPS",
+  "APP_DESCRIPTION": "Berechnen Sie die Fläche eines Grundstücks mit GPS.",
 
-  "TUTORIAL_SLIDE2_TITLE": "Wie soll man die Super Starter App verwenden",
-  "TUTORIAL_SLIDE2_DESCRIPTION": "Nütze und bearbeite die Funktionen und Seiten die du benötigst und lösche den Rest. Wähle aus einer vielzahl an Layouts, wie Anmelden, Registrieren, Tabs und einer Tutorial Seite.",
-
-  "TUTORIAL_SLIDE3_TITLE": "Los gehts",
-  "TUTORIAL_SLIDE3_DESCRIPTION": "Du brauchst Hilfe? Sieh dir das README File an um mehr zu erfahren.",
-
+  "TUTORIAL_SKIP_BUTTON": "Überspringen",
   "TUTORIAL_CONTINUE_BUTTON": "Fortfahren",
 
-  "WELCOME_INTRO": "Der Startpunkt für Deine nächste tolle Ionic App",
+  "TUTORIAL_SLIDE1_TITLE": "Hallo SurfaceGPS",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "Mit <b>SurfaceGPS</b> können Sie einfach die Fläche eines Grundstücks vom GPS Ihres Smartphones aus berechnen.",
+
+  "TUTORIAL_SLIDE2_TITLE": "Wie soll man die SurfaceGPS verwenden?  Schritt #1",
+  "TUTORIAL_SLIDE2_DESCRIPTION": "Klicken Sie in der Liste der Grundstück oben rechts auf, um ein Grundstück zu erstellen, geben Sie ihm einen Namen und klicken Sie auf den Button in der oberen rechten Ecke, um es zu speichern.",
+
+  "TUTORIAL_SLIDE3_TITLE": "Wie soll man die SurfaceGPS verwenden?  Schritt #2",
+  "TUTORIAL_SLIDE3_DESCRIPTION": "Klicken Sie auf das Grundstück in der Grundstückliste, klicken Sie auf 'Speichern' und gehen Sie zum Feld. Klicken Sie am Startpunkt auf 'Stop'.",
+  
+  "TUTORIAL_SLIDE4_TITLE": "Bist du bereit?",
+
+  "WELCOME_INTRO": "Willkommen bei SurfaceGPS",
 
   "SETTINGS_TITLE": "Einstellungen",
-  "SETTINGS_OPTION1": "Option 1",
+  "SETTINGS_OPTION1": "Tutorial beim Start anzeigen",
   "SETTINGS_OPTION2": "Option 2",
-  "SETTINGS_OPTION3": "Option 3",
+  "SETTINGS_OPTION3": "Karte zoomen",
   "SETTINGS_OPTION4": "Option 4",
+  "SETTINGS_OPTION5": "GPS High Accuracy aktivieren",
 
   "SETTINGS_PAGE_PROFILE": "Profil ändern",
 
@@ -44,13 +52,38 @@
   "SIGNUP_ERROR": "Fehler beim Registrieren, bitte überprüfe deine Informationen und versuche es erneut.",
   "SIGNUP_BUTTON": "Registrieren",
 
-  "LIST_MASTER_TITLE": "Artikel",
+  "LIST_MASTER_TITLE": "Grundstück",
 
-  "ITEM_CREATE_TITLE": "Neuer Artikel",
-  "ITEM_CREATE_CHOOSE_IMAGE": "Artikel hinzufügen",
+  "ITEM_CREATE_TITLE": "Neuer Grundstück",
+  "ITEM_CREATE_CHOOSE_IMAGE": "Grundstück hinzufügen",
+
+  "SAVE_BUTTON": "Speichern",
+  "SAVE_POSITION_BUTTON": "Position speichern",
+  "CALC_SURFACE_BUTTON": "Fläche berechnen",
+  "RESET_BUTTON": "Zurücksetzen",
+  "DONE_BUTTON": "Bestätigen",
+  "CANCEL_BUTTON": "Abbrechen",
+  "DELETE_BUTTON": "Löschen",
+  "STOP_BUTTON": "Stopp",
+  "CLOSE_BUTTON": "Schließen",
+  "RESTART_BUTTON": "Neustart",
+  "START_BUTTON": "Start",
+  "CONTINUE_BUTTON": "Weiter",
+  "CLEAN_BUTTON": "Sauber",
 
   "CARDS_TITLE": "Social",
 
   "SEARCH_TITLE": "Suche",
-  "SEARCH_PLACEHOLDER": "Suche in der Artikel-Liste, z.B. \"Donald Duck\""
+  "SEARCH_PLACEHOLDER": "Suche in der GrundstückListe",
+  
+  "FORM_GPS_POINTS_NUMBER": "Anzahl der GPS-Punkte:",
+  "FORM_SURFACE": "Oberfläche:",
+  "RECORDING_POSITIONS": "Aufnahmepositionen",
+  "FRAGE_START_RECORDING_AGAIN_OR_CONTINUE": "Registrierung wiederholen oder fortfahren?",
+  "FRAGE_CONFIRM_DELETE_PIECE": "Sind Sie sicher, dass Sie dieses Grundstück endgültig löschen möchten?",
+  "QUESTION_CONFIRM_DELETE_ALL_POSITIONS": "Sind Sie sicher, dass Sie alle Positionen dieses Grundstücks löschen möchten?",
+  "START_RECORDING": "Starten der Aufnahme ...",
+  "STOP_RECORDING": "Aufnahme stoppen ...",
+  "ALL_POSITIONS_ARE_DELETED": "Alle Positionen wurden gelöscht"
+
 }

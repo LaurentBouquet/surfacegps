@@ -8,7 +8,7 @@
   "LOGIN": "Sign mu",
   "SIGNUP": "Gadzira homwe yejikichidzo",
 
-  "TAB1_TITLE": "Maaitemu",
+  "TAB1_TITLE": "Plots of land",
   "TAB2_TITLE": "Tsvaga",
   "TAB3_TITLE": "Gadziro",
 
@@ -17,18 +17,15 @@
   "TUTORIAL_SKIP_BUTTON": "Darika",
   "TUTORIAL_CONTINUE_BUTTON": "Enderera",
 
-  "TUTORIAL_SLIDE1_TITLE": "Tinokugachirai ku Ionic Super Starter",
-  "TUTORIAL_SLIDE1_DESCRIPTION": "<b>Ionic Super Starter</b> i Ionic Starter yakarungwa zvakakwanira nemapeji akagadzirwa kare nenzira dzakanaka dzinotenderwa",
+  "TUTORIAL_SLIDE1_TITLE": "Tinokugachirai ku SurfaceGPS",
 
-  "TUTORIAL_SLIDE2_TITLE": "Mashandisiro  eSuper Starter",
-  "TUTORIAL_SLIDE2_DESCRIPTION": "Kororodza mapeji akasiyana siyana aunoda ,uchibvisa ayo ausingadi, Tapa huwarirwa hwakawanda unozivikanwa sokunge mapeji e login ne sign up,tabs uye peji rino rechidzidzo",
+  "TUTORIAL_SLIDE2_TITLE": "Mashandisiro  eSurfaceGPS",
 
   "TUTORIAL_SLIDE3_TITLE": "Kuvamba matangiro",
-  "TUTORIAL_SLIDE3_DESCRIPTION": "Unotsvaga rubatsiro? Ongorora Super Starter README kuti uwane chidzidzo chizere",
 
   "TUTORIAL_SLIDE4_TITLE": "Wagadzirira kutamba?",
 
-  "WELCOME_INTRO": "Pekutangira kwako kugadzira jikichidzo guru yeIonic",
+  "WELCOME_INTRO": "Tinokuchingamidza",
 
   "SETTINGS_TITLE": "Gadziro",
   "SETTINGS_OPTION1": "Sarudzo yekutanga",
@@ -49,20 +46,20 @@
   "SIGNUP_ERROR": "Takundikana kugadzira homwe yejikichidzo ,Tinokumbirawo mutarire zvakatarwa pahomwe yenyu yejikichidzo moedza zvakare.",
   "SIGNUP_BUTTON": "Gadzira homwe yejikichidzo",
 
-  "LIST_MASTER_TITLE": "maaitemu",
+  "LIST_MASTER_TITLE": "Plots of land",
 
-  "ITEM_CREATE_TITLE": "Aitemu itsva",
+  "ITEM_CREATE_TITLE": "Nzvimbo itsva yenyika",
   "ITEM_CREATE_CHOOSE_IMAGE": "Wedzera mufananidzo",
 
   "ITEM_NAME_PLACEHOLDER": "Zita",
   "ITEM_ABOUT_PLACEHOLDER": "Nezve",
 
-  "DONE_BUTTON": "aita",
-  "CANCEL_BUTTON": "kanzura",
+  "DONE_BUTTON": "Aita",
+  "CANCEL_BUTTON": "Kanzura",
   "DELETE_BUTTON": "Dzima",
 
   "CARDS_TITLE": "Social",
 
   "SEARCH_TITLE": "Tsvaga",
-  "SEARCH_PLACEHOLDER": "Tsvaga mumaaitemu sokuti \"Donald Duck\""
+  "SEARCH_PLACEHOLDER": "Tarisa chikamu chevhu"
 }

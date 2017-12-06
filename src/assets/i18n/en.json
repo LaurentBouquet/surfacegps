@@ -2,9 +2,9 @@
   "BACK_BUTTON_TEXT": "Back",
 
   "NAME": "Name",
-  "EMAIL": "Email",
   "USERNAME": "Username",
   "PASSWORD": "Password",
+  "EMAIL": "Email",
   "LOGIN": "Sign in",
   "SIGNUP": "Sign up",
 
@@ -21,14 +21,14 @@
   "TUTORIAL_SKIP_BUTTON": "Skip",
   "TUTORIAL_CONTINUE_BUTTON": "Continue",
 
-  "TUTORIAL_SLIDE1_TITLE": "Welcome to the Ionic Super Starter",
-  "TUTORIAL_SLIDE1_DESCRIPTION": "The <b>Ionic Super Starter</b> is a fully-featured Ionic starter with many pre-built pages and best practices.",
+  "TUTORIAL_SLIDE1_TITLE": "Welcome to the SurfaceGPS",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "The <b>SurfaceGPS</b> is a fully-featured Ionic starter with many pre-built pages and best practices.",
 
-  "TUTORIAL_SLIDE2_TITLE": "How to use the Super Starter",
-  "TUTORIAL_SLIDE2_DESCRIPTION": "Assemble the various page types you want and remove the ones you don't. We've provided many common mobile app page layouts, like login and signup pages, tabs, and this tutorial page.",
+  "TUTORIAL_SLIDE2_TITLE": "How to use SurfaceGPS?  Step #1",
+  "TUTORIAL_SLIDE2_DESCRIPTION": "In the list of pieces, click on the top right to create a piece, give it a name, then click on the top right to save it.",
 
-  "TUTORIAL_SLIDE3_TITLE": "Getting Started",
-  "TUTORIAL_SLIDE3_DESCRIPTION": "Need help? Check out the Super Starter README for a full tutorial",
+  "TUTORIAL_SLIDE3_TITLE": "How to use SurfaceGPS?  Step #2",
+  "TUTORIAL_SLIDE3_DESCRIPTION": "Click on the piece in the pieces list, click on 'Save' and move on the land's field. Once at the starting point, click 'Stop'.",
 
   "TUTORIAL_SLIDE4_TITLE": "Ready to Play?",
 
@@ -40,8 +40,6 @@
   "SETTINGS_OPTION3": "Map zoom",
   "SETTINGS_OPTION4": "Option 4",
   "SETTINGS_OPTION5": "Enable GPS high accuracy",
-
-  "SETTINGS_PROFILE_BUTTON": "Edit Profile",
 
   "SETTINGS_PAGE_PROFILE": "Edit Profile",
 

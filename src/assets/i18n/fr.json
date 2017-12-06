@@ -1,8 +1,8 @@
 {
-
   "BACK_BUTTON_TEXT": "Retour", 
 
   "NAME": "Nom",
+  "USERNAME": "Nom d'utilisateur",
   "PASSWORD": "Mot de passe",
   "EMAIL": "E-mail",
   "LOGIN": "Connexion",
@@ -24,10 +24,10 @@
   "TUTORIAL_SLIDE1_TITLE": "Bienvenue dans SurfaceGPS",
   "TUTORIAL_SLIDE1_DESCRIPTION": "<b>SurfaceGPS</b> vous permet de calculer facilement la surface d'une parcelle de terre à partir du GPS de votre smartphone.",
 
-  "TUTORIAL_SLIDE2_TITLE": "Comment utiliser SurfaceGPS  Etape n°1",
+  "TUTORIAL_SLIDE2_TITLE": "Comment utiliser SurfaceGPS ?  Etape n°1",
   "TUTORIAL_SLIDE2_DESCRIPTION": "Dans la liste des parcelles, cliquez en haut à droite pour créer une parcelle, donnez lui un nom, puis cliquez en haut à droite pour l'enregistrer.",
 
-  "TUTORIAL_SLIDE3_TITLE": "Comment utiliser SurfaceGPS  Etape n°2",
+  "TUTORIAL_SLIDE3_TITLE": "Comment utiliser SurfaceGPS ?  Etape n°2",
   "TUTORIAL_SLIDE3_DESCRIPTION": "Cliquez sur la parcelle dans la liste des parcelles, cliquez sur 'Enregistrer' et déplacez vous sur le terrain. Une fois arrivé au point de départ, cliquez sur 'Arrêter'.",
   
   "TUTORIAL_SLIDE4_TITLE": "Vous êtes prêts ?",  
@@ -88,6 +88,5 @@
   "START_RECORDING": "Démarrage de l'enregistrement...",
   "STOP_RECORDING": "Arrêt de l'enregistrement...",
   "ALL_POSITIONS_ARE_DELETED": "Toutes les positions ont été effacées"
-
 
 }

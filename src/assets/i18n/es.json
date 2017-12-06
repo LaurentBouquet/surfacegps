@@ -1,30 +1,45 @@
 {
+  "BACK_BUTTON_TEXT": "Espalda",
+
   "NAME": "Nombre",
+  "USERNAME": "Usuario",
   "PASSWORD": "Contraseña",
   "EMAIL": "Email",
   "LOGIN": "Iniciar sesión",
   "SIGNUP": "Registrarse",
 
-  "TAB1_TITLE": "Items",
+  "TAB1_TITLE": "Parcelas",
   "TAB2_TITLE": "Buscar",
   "TAB3_TITLE": "Ajustes",
+  "TAB4_TITLE": "Acerca de",
 
   "MAP_TITLE": "Mapa",
 
-  "TUTORIAL_SLIDE1_TITLE": "Bienvenido/a al Ionic Super Starter",
-  "TUTORIAL_SLIDE1_DESCRIPTION": "El <b>Ionic Super Starter</b> es un starter de Ionic completo con muchas páginas preconstruidas y mejores prácticas.",
+  "APP_NAME": "SurfaceGPS",
+  "APP_DESCRIPTION": "Calcula el área de una parcela de tierra usando GPS.",
 
-  "TUTORIAL_SLIDE2_TITLE": "Cómo usar el Super Starter",
-  "TUTORIAL_SLIDE2_DESCRIPTION": "Monta los varios tipos de página que quieras y quita los que no. Hemos incluido muchas estructuras de página comunes en apps móviles, como páginas de inicio de sesión y registro, pestañas, y esta página de tutorial.",
+  "TUTORIAL_SKIP_BUTTON": "Omitir",
+  "TUTORIAL_CONTINUE_BUTTON": "Continúa",
 
-  "TUTORIAL_SLIDE3_TITLE": "Empezando",
-  "TUTORIAL_SLIDE3_DESCRIPTION": "¿Necesitas ayuda? Échale un vistazo al README del Super Starter para ver el tutorial completo.",
+  "TUTORIAL_SLIDE1_TITLE": "Bienvenido/a al SurfaceGPS",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "<b>SurfaceGPS</b> le permite calcular fácilmente el área de una parcela desde el GPS de su teléfono inteligente.",
+
+  "TUTORIAL_SLIDE2_TITLE": "¿Cómo usar SurfaceGPS?  Paso #1",
+  "TUTORIAL_SLIDE2_DESCRIPTION": "En la lista de parcelas, haga clic en la parte superior derecha para crear una parcela, asígnele un nombre, luego haga clic en la parte superior derecha para guardarlo.",
+
+  "TUTORIAL_SLIDE3_TITLE": "¿Cómo usar SurfaceGPS?  Paso #2",
+  "TUTORIAL_SLIDE3_DESCRIPTION": "Haga clic en el paquete en la lista de parcelas, haga clic en 'Guardar' y vaya al campo. Una vez en el punto de partida, haga clic en 'Parar'.",
+
+  "TUTORIAL_SLIDE4_TITLE": "¿Estás listo?",
+
+  "WELCOME_INTRO": "Bienvenido a SurfaceGPS",
 
   "SETTINGS_TITLE": "Ajustes",
-  "SETTINGS_OPTION1": "Opción 1",
+  "SETTINGS_OPTION1": "Mostrar tutorial al inicio",
   "SETTINGS_OPTION2": "Opción 2",
-  "SETTINGS_OPTION3": "Opción 3",
+  "SETTINGS_OPTION3": "Mapa de zoom",
   "SETTINGS_OPTION4": "Opción 4",
+  "SETTINGS_OPTION5": "Habilitar alta precisión de GPS",
 
   "SETTINGS_PAGE_PROFILE": "Editar Perfil",
 
@@ -37,12 +52,37 @@
   "SIGNUP_ERROR": "No se ha podido crear la cuenta. Por favor revisa la información de la cuenta e inténtalo de nuevo.",
   "SIGNUP_BUTTON": "Registrarse",
 
-  "LIST_MASTER_TITLE": "Items",
+  "LIST_MASTER_TITLE": "Parcelas",
 
-  "ITEM_CREATE_TITLE": "Nuevo Item",
+  "ITEM_CREATE_TITLE": "Nueva parcela",
   "ITEM_CREATE_CHOOSE_IMAGE": "Añadir Imagen",
+
+  "SAVE_BUTTON": "Guardar",
+  "SAVE_POSITION_BUTTON": "Guardar posición",
+  "CALC_SURFACE_BUTTON": "Calcular área",
+  "RESET_BUTTON": "Restablecer",
+  "DONE_BUTTON": "Validar",
+  "CANCEL_BUTTON": "Cancelar",
+  "DELETE_BUTTON": "Eliminar",
+  "STOP_BUTTON": "Stop",
+  "CLOSE_BUTTON": "Cerrar",
+  "RESTART_BUTTON": "Reiniciar",
+  "START_BUTTON": "Inicio",
+  "CONTINUE_BUTTON": "Continuar",
+  "CLEAN_BUTTON": "Limpio",
 
   "CARDS_TITLE": "Social",
 
-  "SEARCH_TITLE": "Buscar"
+  "SEARCH_TITLE": "Buscar",
+  "SEARCH_PLACEHOLDER": "Buscar una parcela",
+  
+  "FORM_GPS_POINTS_NUMBER": "Número de puntos de GPS:",
+  "FORM_SURFACE": "Superficie:",
+  "RECORDING_POSITIONS": "Posiciones de grabación",
+  "QUESTION_START_RECORDING_AGAIN_OR_CONTINUE": "¿Repite el registro o continúa?",
+  "QUESTION_CONFIRM_DELETE_PIECE": "¿Está seguro de que desea eliminar permanentemente este paquete?",
+  "QUESTION_CONFIRM_DELETE_ALL_POSITIONS": "¿Está seguro de que desea eliminar todas las posiciones de esta parcela?",
+  "START_RECORDING": "Iniciando la grabación ...",
+  "STOP_RECORDING": "Detener la grabación ...",
+  "ALL_POSITIONS_ARE_DELETED": "Todas las posiciones se han eliminado"
 }

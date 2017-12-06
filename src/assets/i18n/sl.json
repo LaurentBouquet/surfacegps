@@ -5,26 +5,19 @@
   "LOGIN": "Prijava",
   "SIGNUP": "Ustvari račun",
 
-  "TAB1_TITLE": "Elementi",
+  "TAB1_TITLE": "Zemljišča",
   "TAB2_TITLE": "Iskanje",
   "TAB3_TITLE": "Nastavitve",
 
-  "MAP_TITLE": "Zemljevid",
+  "MAP_TITLE": "Zemljišča",
 
-  "TUTORIAL_SLIDE1_TITLE": "Dobrodošli v Ionic Super Starter",
-  "TUTORIAL_SLIDE1_DESCRIPTION": "<b>Ionic Super Starter</b> je celosten Ionic začetni paket z pestrim naborom funkcionalnosti in uporablja najboljše prakse razvoja Ionic aplikacij.",
+  "TUTORIAL_SLIDE1_TITLE": "Dobrodošli v SurfaceGPS",
 
-  "TUTORIAL_SLIDE2_TITLE": "Kako uporabljati Super Starter",
-  "TUTORIAL_SLIDE2_DESCRIPTION": "Sestavite poljubne tipe strani in odstranite tiste, ki jih ne potrebujete. Ponujamo vam mnogo različnih oblik strani, npr. stran za prijavo oz. vpis, stran z zavihki in stran tega vodiča.",
+  "TUTORIAL_SLIDE2_TITLE": "Kako uporabljati SurfaceGPS",
 
   "TUTORIAL_SLIDE3_TITLE": "Kako začeti?",
-  "TUTORIAL_SLIDE3_DESCRIPTION": "Potrebujete pomoč? Poglejte si Super Starter README datoteko za celoten vodič.",
 
   "SETTINGS_TITLE": "Nastavitve",
-  "SETTINGS_OPTION1": "Opcija 1",
-  "SETTINGS_OPTION2": "Opcija 2",
-  "SETTINGS_OPTION3": "Opcija 3",
-  "SETTINGS_OPTION4": "Opcija 4",
 
   "SETTINGS_PAGE_PROFILE": "Uredi profil",
 
@@ -37,9 +30,9 @@
   "SIGNUP_ERROR": "Napaka pri kreiranju računa. Prosimo preglejte podatke kreiranega računa in poskusite ponovno. ",
   "SIGNUP_BUTTON": "Ustvari račun",
 
-  "LIST_MASTER_TITLE": "Elementi",
+  "LIST_MASTER_TITLE": "Zemljišča",
 
-  "ITEM_CREATE_TITLE": "Dodaj element",
+  "ITEM_CREATE_TITLE": "Nova parcela",
   "ITEM_CREATE_CHOOSE_IMAGE": "Dodaj sliko",
 
   "CARDS_TITLE": "Socialno",

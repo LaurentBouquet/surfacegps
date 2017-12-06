@@ -8,7 +8,7 @@
   "LOGIN": "サインイン",
   "SIGNUP": "サインアップ",
 
-  "TAB1_TITLE": "項目",
+  "TAB1_TITLE": "土地のプロット",
   "TAB2_TITLE": "検索",
   "TAB3_TITLE": "設定",
 
@@ -17,14 +17,11 @@
   "TUTORIAL_SKIP_BUTTON": "スキップ",
   "TUTORIAL_CONTINUE_BUTTON": "続ける",
 
-  "TUTORIAL_SLIDE1_TITLE": "Ionic Super Starterへようこそ",
-  "TUTORIAL_SLIDE1_DESCRIPTION": "<b> Ionic Super Starter </b>は、多くのビルド済ページとベストプラクティスを備えた、完全な機能をもつIonicのスターターです。",
+  "TUTORIAL_SLIDE1_TITLE": "SurfaceGPSへようこそ",
 
-  "TUTORIAL_SLIDE2_TITLE": "Super Starterの使い方",
-  "TUTORIAL_SLIDE2_DESCRIPTION": "いろいろなページタイプの中から欲しいものを組み合わせて、いらないものを取り除いてください。 ログインページ、サインアップページ、タブ、このチュートリアルページなど、一般的なモバイルアプリのページレイアウトをいろいろと提供しています。",
+  "TUTORIAL_SLIDE2_TITLE": "SurfaceGPSの使い方",
 
   "TUTORIAL_SLIDE3_TITLE": "はじめに",
-  "TUTORIAL_SLIDE3_DESCRIPTION": "ヘルプが必要ですか？完全なチュートリアルについては、Super Starter READMEを参照してください。",
 
   "TUTORIAL_SLIDE4_TITLE": "準備ができましたか?",
 
@@ -49,9 +46,9 @@
   "SIGNUP_ERROR": "アカウントを作成できません。 アカウント情報を確認して、もう一度お試しください。",
   "SIGNUP_BUTTON": "サインアップ",
 
-  "LIST_MASTER_TITLE": "項目",
+  "LIST_MASTER_TITLE": "土地のプロット",
 
-  "ITEM_CREATE_TITLE": "新しい項目",
+  "ITEM_CREATE_TITLE": "新しい土地のプロット",
   "ITEM_CREATE_CHOOSE_IMAGE": "画像の追加",
 
   "ITEM_NAME_PLACEHOLDER": "名前",

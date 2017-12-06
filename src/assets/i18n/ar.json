@@ -8,7 +8,7 @@
   "LOGIN": "تسجيل الدخول",
   "SIGNUP": "انشاء الحساب",
 
-  "TAB1_TITLE": "عناصر",
+  "TAB1_TITLE": "قطعة أرض",
   "TAB2_TITLE": "بحث",
   "TAB3_TITLE": "إعدادات",
 
@@ -17,24 +17,17 @@
   "TUTORIAL_SKIP_BUTTON": "تخطى",
   "TUTORIAL_CONTINUE_BUTTON": "استمر",
 
-  "TUTORIAL_SLIDE1_TITLE": "مرحبا بكم في عدة البدء Ionic Super Starter",
-  "TUTORIAL_SLIDE1_DESCRIPTION": "<b>Ionic Super Starter</b> عبارة عن عدة لبدء التطوير بواسطة Ionic. وهي تتميز بالعديد من الصفحات وأفضل الممارسات.",
-
-  "TUTORIAL_SLIDE2_TITLE": "كيفية استخدام Ionic Super Starter",
-  "TUTORIAL_SLIDE2_DESCRIPTION": "يمكنك تجميع أنواع الصفحات المختلفة التي ترغب بها وإزالة الباقي. وتوفر عدة البدء ​​العديد من تخطيطات الصفحات الاكثر شيوعا في التطبيقات النقالة، مثل صفحات تسجيل الدخول وانشاء الحساب، علامات التبويب، وهذه الصفحة التعليمية.",
-
+  "TUTORIAL_SLIDE1_TITLE": "مرحبا بكم في عدة البدء SurfaceGPS",
+  
+  "TUTORIAL_SLIDE2_TITLE": "كيفية استخدام SurfaceGPS",
+  
   "TUTORIAL_SLIDE3_TITLE": "كيفية الشروع",
-  "TUTORIAL_SLIDE3_DESCRIPTION": "هل تحتاج إلى مساعدة؟ يمكنك الاطلاع على README لبرنامج تعليمي كامل على Ionic Super Starter",
-
+  
   "TUTORIAL_SLIDE4_TITLE": "مستعد للعب؟",
 
-  "WELCOME_INTRO": "نقطة الانطلاق لتطبيق Ionic العظيم الخاص بك",
+  "WELCOME_INTRO": "نقطة البداية لتطبيق سورفيسغس الخاص بك",
 
   "SETTINGS_TITLE": "إعدادات",
-  "SETTINGS_OPTION1": "خيار 1",
-  "SETTINGS_OPTION2": "خيار 2",
-  "SETTINGS_OPTION3": "خيار 3",
-  "SETTINGS_OPTION4": "خيار 4",
 
   "SETTINGS_PROFILE_BUTTON": "تعديل الملف الشخصي",
 
@@ -49,7 +42,7 @@
   "SIGNUP_ERROR": "تعذر إنشاء الحساب. يرجى التحقق من معلومات حسابك وإعادة المحاولة.",
   "SIGNUP_BUTTON": "انشاء الحساب",
 
-  "LIST_MASTER_TITLE": "عناصر",
+  "LIST_MASTER_TITLE": "قطعة أرض",
 
   "ITEM_CREATE_TITLE": "عنصر جديد",
   "ITEM_CREATE_CHOOSE_IMAGE": "إضافة صورة",
@@ -63,6 +56,5 @@
 
   "CARDS_TITLE": "اجتماعي",
 
-  "SEARCH_TITLE": "بحث",
-  "SEARCH_PLACEHOLDER": "ابحث في قائمة العناصر، مثل \"Donald Duck\""
+  "SEARCH_TITLE": "بحث"
 }

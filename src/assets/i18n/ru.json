@@ -11,14 +11,14 @@
 
   "MAP_TITLE": "Карта",
 
-  "TUTORIAL_SLIDE1_TITLE": "Добро пожаловать в Ionic Super Starter",
-  "TUTORIAL_SLIDE1_DESCRIPTION": "<b>Ionic Super Starter</b> это полноценный набор примеров Ionic с большим количеством готовых страниц и лучших практик.",
+  "TUTORIAL_SLIDE1_TITLE": "Добро пожаловать в SurfaceGPS",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "<b>SurfaceGPS</b> это полноценный набор примеров Ionic с большим количеством готовых страниц и лучших практик.",
 
-  "TUTORIAL_SLIDE2_TITLE": "Как использовать Super Starter",
+  "TUTORIAL_SLIDE2_TITLE": "Как использовать SurfaceGPS",
   "TUTORIAL_SLIDE2_DESCRIPTION": "Сделайте свой набор из многочисленных страниц разного типа. Все лишнее можете выкинуть. Мы предоставили много типовых макетов страниц мобильных приложений, таких как страницы регистрации, вкладки, и страницы с руководством, наподобие этой.",
 
   "TUTORIAL_SLIDE3_TITLE": "Начало работы",
-  "TUTORIAL_SLIDE3_DESCRIPTION": "Нужна помощь? Вы найдете полное руководство к Super Starter в файле README",
+  "TUTORIAL_SLIDE3_DESCRIPTION": "Нужна помощь? Вы найдете полное руководство к SurfaceGPS в файле README",
 
   "SETTINGS_TITLE": "Настройки",
   "SETTINGS_OPTION1": "Опция 1",

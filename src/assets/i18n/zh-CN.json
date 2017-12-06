@@ -1,0 +1,92 @@
+{
+    "BACK_BUTTON_TEXT": "返回", 
+  
+    "NAME": "名稱", 
+    "USERNAME": "用戶名", 
+    "密碼": "密碼", 
+    "EMAIL": "電子郵件", 
+    "登錄": "連接", 
+    "註冊": "註冊",
+  
+    "TAB1_TITLE": "包裹", 
+    "TAB2_TITLE": "搜索", 
+    "TAB3_TITLE": "參數", 
+    "TAB4_TITLE": "關於", 
+  
+    "MAP_TITLE": "地圖", 
+  
+    "APP_NAME": "SurfaceGPS", 
+    "APP_DESCRIPTION": "使用GPS計算一塊土地的面積", 
+  
+    "TUTORIAL_SKIP_BUTTON": "跳過", 
+    "TUTORIAL_CONTINUE_BUTTON": "繼續", 
+  
+    "TUTORIAL_SLIDE1_TITLE": "歡迎來到SurfaceGPS", 
+    "TUTORIAL_SLIDE1_DESCRIPTION": "<b> SurfaceGPS </b>允許您從智能手機的GPS輕鬆計算地塊的面積。", 
+  
+    "TUTORIAL_SLIDE2_TITLE": "如何使用SurfaceGPS？步驟＃1", 
+    "TUTORIAL_SLIDE2_DESCRIPTION": "在地塊列表中，點擊右上角創建一個包裹，給它一個名字，然後點擊右上角的保存。", 
+  
+    "TUTORIAL_SLIDE3_TITLE": "如何使用SurfaceGPS？步驟＃2", 
+    "TUTORIAL_SLIDE3_DESCRIPTION": "點擊地塊列表中的地塊，點擊'保存'並移動到地圖上。到達起點後，點擊'停止'。",
+    
+    "TUTORIAL_SLIDE4_TITLE": "你準備好了嗎？", 
+  
+    "WELCOME_INTRO": "歡迎來到SurfaceGPS", 
+  
+    "SETTINGS_TITLE": "設置", 
+    "SETTINGS_OPTION1": "啟動時顯示教程", 
+    "SETTINGS_OPTION2": "選項2", 
+    "SETTINGS_OPTION3": "縮放地圖", 
+    "SETTINGS_OPTION4": "選項4", 
+    "SETTINGS_OPTION5": "啟用GPS高精度", 
+  
+    "SETTINGS_PAGE_PROFILE": "編輯個人資料", 
+  
+    "WELCOME_TITLE": "歡迎", 
+  
+    "LOGIN_TITLE": "連接", 
+    "LOGIN_ERROR": "無法登錄。請檢查您的帳戶信息，然後重試。", 
+    "LOGIN_BUTTON": "連接", 
+    "SIGNUP_TITLE": "註冊", 
+    "SIGNUP_ERROR": "無法登錄，請檢查您的帳戶信息並重試。", 
+    "SIGNUP_BUTTON": "註冊", 
+  
+    "LIST_MASTER_TITLE": "包裹", 
+  
+    "ITEM_CREATE_TITLE": "新包裹", 
+    "ITEM_CREATE_CHOOSE_IMAGE": "添加圖片", 
+  
+    "ITEM_NAME_PLACEHOLDER": "包裹名稱", 
+    "ITEM_ABOUT_PLACEHOLDER": "說明", 
+  
+    "SAVE_BUTTON": "保存", 
+    "SAVE_POSITION_BUTTON": "保存位置", 
+    "CALC_SURFACE_BUTTON": "計算面積", 
+    "RESET_BUTTON": "重置", 
+    "DONE_BUTTON": "驗證", 
+    "CANCEL_BUTTON": "取消", 
+    "DELETE_BUTTON": "刪除", 
+    "STOP_BUTTON": "停止", 
+    "CLOSE_BUTTON": "關閉", 
+    "RESTART_BUTTON": "重新啟動", 
+    "START_BUTTON": "開始", 
+    "CONTINUE_BUTTON": "繼續", 
+    "CLEAN_BUTTON": "清潔", 
+  
+    "CARDS_TITLE": "社交", 
+  
+    "SEARCH_TITLE": "搜索", 
+    "SEARCH_PLACEHOLDER": "查找包裹", 
+  
+    "FORM_GPS_POINTS_NUMBER": "GPS點數：", 
+    "FORM_SURFACE": "Surface：", 
+    "RECORDING_POSITIONS": "錄製位置", 
+    "QUESTION_START_RECORDING_AGAIN_OR_CONTINUE": "重複註冊還是繼續？", 
+    "QUESTION_CONFIRM_DELETE_PIECE": "你確定要永久刪除這個包嗎？", 
+    "QUESTION_CONFIRM_DELETE_ALL_POSITIONS": "你確定要刪除這個包裹的所有位置？", 
+    "START_RECORDING": "開始錄製...", 
+    "STOP_RECORDING": "停止錄製...", 
+    "ALL_POSITIONS_ARE_DELETED": "所有職位已被刪除"
+  
+  }
