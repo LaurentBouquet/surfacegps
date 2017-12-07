@@ -29,7 +29,7 @@ _Note: SurfaceGPS requires Ionic CLI 3._
 
 2. Run:
 ```bash
-git clone https://laurentbouquet@bitbucket.org/joliciel/surfacegps.git
+git clone https://github.com/LaurentBouquet/surfacegps.git
 cd surfacegps
 ionic serve -c
 ```
