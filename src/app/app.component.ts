@@ -1,3 +1,21 @@
+// Copyright (C) 2017 Laurent Bouquet
+// 
+// This file is part of SurfaceGPS.
+// 
+// SurfaceGPS is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// SurfaceGPS is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+// 
+// You should have received a copy of the GNU General Public License
+// along with SurfaceGPS.  If not, see <http://www.gnu.org/licenses/>.
+// 
+
 import { Component, ViewChild } from '@angular/core';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -7,32 +25,12 @@ import { Config, Nav, Platform } from 'ionic-angular';
 import { FirstRunPage, MainPage } from '../pages/pages';
 import { Settings } from '../providers/providers';
 
-/*@Component({
-  template: `<ion-menu [content]="content">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-
-    <ion-content>
-      <ion-list>
-        <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-          {{p.title}}
-        </button>
-      </ion-list>
-    </ion-content>
-
-  </ion-menu>
-  <ion-nav #content [root]="rootPage"></ion-nav>`
-})*/
 @Component({
   template: `<ion-nav #content [root]="rootPage"></ion-nav>`
 })
 
 
 export class MyApp {
-  //rootPage = FirstRunPage;
 
   @ViewChild(Nav) nav: Nav;
 
@@ -90,12 +88,4 @@ export class MyApp {
     });
   }
   
-  /*
-  openPage(page) {
-    // Reset the content nav to have just this page
-    // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
-  }
-  */
-
 }
