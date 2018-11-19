@@ -109,8 +109,8 @@ along with SurfaceGPS.  If not, see <http://www.gnu.org/licenses/>.
     </plugin>
     <plugin name="cordova-sqlite-storage" spec="^2.1.2" />
     <plugin name="cordova-plugin-googlemaps" spec="^2.1.1">
-        <variable name="API_KEY_FOR_ANDROID" value="AIzaSyAYHenev1uxQOo9sVj7Eu8M6t1RhdnqSdQ" />
-        <variable name="API_KEY_FOR_IOS" value="AIzaSyAYHenev1uxQOo9sVj7Eu8M6t1RhdnqSdQ" />
+        <variable name="API_KEY_FOR_ANDROID" value="yourGoogleMapsApiKey" />
+        <variable name="API_KEY_FOR_IOS" value="yourGoogleMapsApiKey" />
     </plugin>
     <plugin name="cordova-plugin-app-version" spec="^0.1.9" />
 </widget>
